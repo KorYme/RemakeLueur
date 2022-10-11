@@ -1,5 +1,5 @@
 {
-    "name": "PlayerControls",
+    "name": "PlayerInputs",
     "maps": [
         {
             "name": "Player",
@@ -50,7 +50,7 @@
                 {
                     "name": "left",
                     "id": "7ea29668-1f52-4448-972c-33395a39d93b",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -61,7 +61,7 @@
                 {
                     "name": "right",
                     "id": "9de9e395-c0e9-4e97-9034-73ce2d2219f3",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 78bbde29a5658a4449ca878a56f10cce
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 285
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_9
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 2011
+        width: 771
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 62.816284, y: -43.917034}
+        - {x: 142.5, y: -43.917034}
+        - {x: 142.5, y: 142.5}
+        - {x: -126.5, y: 142.5}
+        - {x: -135.90686, y: 14.841534}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fcae67dc0a30b4d9e3a4e10e5b891a
+      internalID: -139912711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tileset lueur calque par calque_31: 1264920915
+      Tileset lueur calque par calque_14: 1876164932
+      Tileset lueur calque par calque_8: -1974869912
+      Tileset lueur calque par calque_19: 1563011448
+      Tileset lueur calque par calque_24: -215548728
+      Tileset lueur calque par calque_48: 949558048
+      Tileset lueur calque par calque_42: -67561588
+      Tileset lueur calque par calque_21: -169403725
+      Tileset lueur calque par calque_16: -658089540
+      Tileset lueur calque par calque_54: -572282630
+      Tileset lueur calque par calque_0: -1805649850
+      Tileset lueur calque par calque_38: 1233180256
+      Tileset lueur calque par calque_46: 917224562
+      Tileset lueur calque par calque_25: -638749320
+      Tileset lueur calque par calque_55: 1323070314
+      Tileset lueur calque par calque_59: -1938723694
+      Tileset lueur calque par calque_36: -1148582701
+      Tileset lueur calque par calque_63: -1061481808
+      Tileset lueur calque par calque_49: 1919186466
+      Tileset lueur calque par calque_2: 909973756
+      Test_0: 1740713582
+      Tileset lueur calque par calque_7: 1219288198
+      Tileset lueur calque par calque_43: -1882381406
+      Tileset lueur calque par calque_62: 283617679
+      Tileset lueur calque par calque_58: 872999886
+      Test_1: 420285684
+      Tileset lueur calque par calque_12: -649237575
+      Tileset lueur calque par calque_45: 171393314
+      Tileset lueur calque par calque_27: 1924051228
+      Tileset lueur calque par calque_57: 1825430805
+      Tileset lueur calque par calque_4: -761714632
+      Tileset lueur calque par calque_32: -247948928
+      Tileset lueur calque par calque_47: -1695406379
+      Tileset lueur calque par calque_52: -602862885
+      Tileset lueur calque par calque_41: 566948795
+      Tileset lueur calque par calque_65: 1515169051
+      Tileset lueur calque par calque_22: 1965921669
+      Tileset lueur calque par calque_68: -445639260
+      Tileset lueur calque par calque_1: 303248844
+      Tileset lueur calque par calque_17: 944706319
+      Tileset lueur calque par calque_5: -722422660
+      Tileset lueur calque par calque_6: -1390692834
+      Tileset lueur calque par calque_33: -1538964003
+      Tileset lueur calque par calque_51: 2062032975
+      Tileset lueur calque par calque_69: 2085464222
+      Tileset lueur calque par calque_64: 1705574661
+      Tileset lueur calque par calque_15: 988198163
+      Tileset lueur calque par calque_40: -583857234
+      Tileset lueur calque par calque_60: 2024565944
+      Tileset lueur calque par calque_50: -1832656873
+      Tileset lueur calque par calque_61: 531086902
+      Tileset lueur calque par calque_10: 1738201124
+      Tileset lueur calque par calque_29: 1866934199
+      Tileset lueur calque par calque_34: -1048931759
+      Test_2: 1719027801
+      Tileset lueur calque par calque_39: -770927068
+      Tileset lueur calque par calque_53: -242485280
+      Tileset lueur calque par calque_13: 357365373
+      Tileset lueur calque par calque_18: 1829548723
+      Tileset lueur calque par calque_44: -1864375498
+      Tileset lueur calque par calque_9: -139912711
+      Tileset lueur calque par calque_23: -1324764741
+      Tileset lueur calque par calque_20: -2068995326
+      Tileset lueur calque par calque_28: 749702286
+      Tileset lueur calque par calque_3: -2046875345
+      Tileset lueur calque par calque_26: 1249747790
+      Tileset lueur calque par calque_56: -1371944266
+      Tileset lueur calque par calque_35: -1489316073
+      Tileset lueur calque par calque_30: -2083566148
+      Tileset lueur calque par calque_67: -70250456
+      Tileset lueur calque par calque_11: -1531930510
+      Tileset lueur calque par calque_37: 1868218490
+      Tileset lueur calque par calque_66: -1764405117
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1457 @@
+fileFormatVersion: 2
+guid: 293a605e1518e164b9e451712eb40438
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 285
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.42404}
+        - {x: 142.5, y: -142.42404}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4053121d7479b7542bb5300576027e5e
+      internalID: -1805649850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d021349cb1d415141a945cc836eb21ea
+      internalID: 303248844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_2
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab221a56b4fa95c4fabef453ebbe9408
+      internalID: 909973756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3837561d678e4ac469c3c06d021139b7
+      internalID: -2046875345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_4
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248067e57f922794785b074ce41a225a
+      internalID: -761714632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_5
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77f2d90584a83148ac34404ee5ec1e5
+      internalID: -722422660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_6
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe07fe3f760c1db4fa2224c610aa7dcc
+      internalID: -1390692834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_7
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365957936020d2a48bcce290738d7c35
+      internalID: 1219288198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_8
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6f2b6485c2b6b4e8cbefaddc32dc5a
+      internalID: -1974869912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_9
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 62.816284, y: -43.917034}
+        - {x: 142.5, y: -43.917034}
+        - {x: 142.5, y: 142.5}
+        - {x: -126.5, y: 142.5}
+        - {x: -135.90686, y: 14.841534}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fcae67dc0a30b4d9e3a4e10e5b891a
+      internalID: -139912711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_10
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -66.383545}
+        - {x: 88.61224, y: -66.383545}
+        - {x: 142.5, y: -4.168591}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e805a4a6c63563488ac68e13be5627a
+      internalID: 1738201124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_11
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 1934
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 56.5, y: 142.5}
+        - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -2.4403977}
+        - {x: -118.87572, y: -2.4403977}
+        - {x: -77.40305, y: 1.0159886}
+        - {x: 43.558865, y: 25.210693}
+        - {x: 67.75124, y: 47.677204}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c7392fa38d56d45b991edfd33e7dfb
+      internalID: -1531930510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8080fc9e20bee41835f6010df737d0
+      internalID: -649237575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_13
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a96c035a4c9ac44bc5ff915c760493
+      internalID: 357365373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_14
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b67c88471798c488a44cfb74c54629
+      internalID: 1876164932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_15
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7bd1d72b3d4bd43a13a5a23e74b8e8
+      internalID: 988198163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_17
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfcbbb62af1c4d4fa2939f9696c55cd
+      internalID: 944706319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_18
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7998674b04bcab040865c0c109d2c9fc
+      internalID: 1829548723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_20
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921d64843b299344f8800b8af6d4e0de
+      internalID: -2068995326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_21
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 1649
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756940ffd2ff00a4d8b16bce49a9095a
+      internalID: -169403725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3b87ec63a44e14283e5349964afd7a
+      internalID: 1965921669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_23
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b493ac1b46a1de4588073784cb91e73
+      internalID: -1324764741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_24
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: 142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64de716a6dc10c946814b1c1e2985f9c
+      internalID: -215548728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_25
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 142.5, y: 142.5}
+        - {x: -142.5, y: 142.5}
+        - {x: -142.5, y: -142.5}
+        - {x: 142.5, y: -142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1437a2165599e4f4e8cd7db96cd86a78
+      internalID: -638749320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_26
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf03861319861114f8f0498707cf0b10
+      internalID: 1249747790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_27
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6fccde82191ac44a7fb37769665c21
+      internalID: 1924051228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_28
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d167580d9757545bbd93e4ee93e215
+      internalID: 749702286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_29
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedf6411fec47fe4888f45b89d48ae5b
+      internalID: 1866934199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_30
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab041b007c9c03e48badb0cc9455da06
+      internalID: -2083566148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_31
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cca780f38157c45969e7120d6035f3
+      internalID: 1264920915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_32
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 1364
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9115925df3eaa0e438f144e0d7bda617
+      internalID: -247948928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515cc4cebd1d45d4c9549196b1907092
+      internalID: -1538964003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_34
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -141.82278, y: 128.49376}
+        - {x: -141.82278, y: -142.5}
+        - {x: 142.5, y: -142.5}
+        - {x: 142.5, y: -77.16123}
+        - {x: 102.5, y: 5.5}
+        - {x: -41.59719, y: 128.49376}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898faa9db5a58654fa8658619df3645a
+      internalID: -1048931759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_37
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44152d92aa2abfb42b597e38e1f1c2c4
+      internalID: 1868218490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_38
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85082e4b3f48d8f46bef1ea750758560
+      internalID: 1233180256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_39
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dea320a8ff2bcc4090cfaaecdc1ebcb
+      internalID: -770927068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_40
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be44f239dcdbfe04fbb8072bfea0b158
+      internalID: -583857234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_41
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98a19e0d309c724abf21950e7a9ab3c
+      internalID: 566948795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_42
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 1079
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36052c1514739747b12bf3064fb96e4
+      internalID: -67561588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b867c4baf65c94a9df322f1dc085e7
+      internalID: -1882381406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_44
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb001e3883cd515478c2fe6ab34bbcf5
+      internalID: -1864375498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_46
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4eddbcbe525a7a4888fc74a8957e898
+      internalID: 917224562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_47
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5ead382ae1cfa4bae740d1beca0353
+      internalID: -1695406379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_48
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bff45eea04d246468318a91c9172844
+      internalID: 949558048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_49
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc7573ec70ed914088891c45466d745
+      internalID: 1919186466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_50
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b981986b3d89f2341921266deb99cfd9
+      internalID: -1832656873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_51
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 794
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a61535fc88871b4e942b498460dedea
+      internalID: 2062032975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afe5f4e369e01147bb6542392b659b5
+      internalID: -242485280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_54
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d47e93af9b3bdf46981fa3cbaa14a38
+      internalID: -572282630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_56
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40ff852d1077554a830c9cad2de8a5f
+      internalID: -1371944266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_57
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d425c0e134819c4285ec55324d41cc8
+      internalID: 1825430805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_58
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce3837aca9034243947c092bd214856
+      internalID: 872999886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_59
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e88be1ca55c81143a87e97f4e4171ea
+      internalID: -1938723694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_60
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aade23d4f25f63040b993d97d7ccc201
+      internalID: 2024565944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_61
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 509
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b2f96a9f0240f4981e89f359ae7939
+      internalID: 531086902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e310cd2210d35084393d79a13dfd5acc
+      internalID: 1515169051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset lueur calque par calque_66
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 224
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f407ad6bc8f7024e81f1321fc12b6e2
+      internalID: -1764405117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tileset lueur calque par calque_31: 1264920915
+      Tileset lueur calque par calque_14: 1876164932
+      Tileset lueur calque par calque_8: -1974869912
+      Tileset lueur calque par calque_37: 1868218490
+      Tileset lueur calque par calque_24: -215548728
+      Tileset lueur calque par calque_48: 949558048
+      Tileset lueur calque par calque_42: -67561588
+      Tileset lueur calque par calque_21: -169403725
+      Tileset lueur calque par calque_16: -658089540
+      Tileset lueur calque par calque_54: -572282630
+      Tileset lueur calque par calque_0: -1805649850
+      Tileset lueur calque par calque_38: 1233180256
+      Tileset lueur calque par calque_46: 917224562
+      Tileset lueur calque par calque_25: -638749320
+      Tileset lueur calque par calque_55: 1323070314
+      Tileset lueur calque par calque_59: -1938723694
+      Tileset lueur calque par calque_36: -1148582701
+      Tileset lueur calque par calque_63: -1061481808
+      Tileset lueur calque par calque_49: 1919186466
+      Tileset lueur calque par calque_2: 909973756
+      Tileset lueur calque par calque_7: 1219288198
+      Tileset lueur calque par calque_43: -1882381406
+      Tileset lueur calque par calque_62: 283617679
+      Tileset lueur calque par calque_58: 872999886
+      Tileset lueur calque par calque_12: -649237575
+      Tileset lueur calque par calque_45: 171393314
+      Tileset lueur calque par calque_27: 1924051228
+      Tileset lueur calque par calque_57: 1825430805
+      Tileset lueur calque par calque_4: -761714632
+      Tileset lueur calque par calque_32: -247948928
+      Tileset lueur calque par calque_47: -1695406379
+      Tileset lueur calque par calque_52: -602862885
+      Tileset lueur calque par calque_41: 566948795
+      Tileset lueur calque par calque_65: 1515169051
+      Tileset lueur calque par calque_22: 1965921669
+      Tileset lueur calque par calque_68: -445639260
+      Tileset lueur calque par calque_1: 303248844
+      Tileset lueur calque par calque_17: 944706319
+      Tileset lueur calque par calque_51: 2062032975
+      Tileset lueur calque par calque_6: -1390692834
+      Tileset lueur calque par calque_33: -1538964003
+      Tileset lueur calque par calque_5: -722422660
+      Tileset lueur calque par calque_69: 2085464222
+      Tileset lueur calque par calque_64: 1705574661
+      Tileset lueur calque par calque_15: 988198163
+      Tileset lueur calque par calque_40: -583857234
+      Tileset lueur calque par calque_60: 2024565944
+      Tileset lueur calque par calque_50: -1832656873
+      Tileset lueur calque par calque_61: 531086902
+      Tileset lueur calque par calque_10: 1738201124
+      Tileset lueur calque par calque_29: 1866934199
+      Tileset lueur calque par calque_34: -1048931759
+      Tileset lueur calque par calque_39: -770927068
+      Tileset lueur calque par calque_53: -242485280
+      Tileset lueur calque par calque_13: 357365373
+      Tileset lueur calque par calque_18: 1829548723
+      Tileset lueur calque par calque_44: -1864375498
+      Tileset lueur calque par calque_9: -139912711
+      Tileset lueur calque par calque_23: -1324764741
+      Tileset lueur calque par calque_20: -2068995326
+      Tileset lueur calque par calque_28: 749702286
+      Tileset lueur calque par calque_3: -2046875345
+      Tileset lueur calque par calque_26: 1249747790
+      Tileset lueur calque par calque_35: -1489316073
+      Tileset lueur calque par calque_30: -2083566148
+      Tileset lueur calque par calque_11: -1531930510
+      Tileset lueur calque par calque_67: -70250456
+      Tileset lueur calque par calque_56: -1371944266
+      Tileset lueur calque par calque_19: 1563011448
+      Tileset lueur calque par calque_66: -1764405117
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
