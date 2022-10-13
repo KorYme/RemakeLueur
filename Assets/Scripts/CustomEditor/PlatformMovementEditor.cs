@@ -1,4 +1,3 @@
-using Codice.Client.Common;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -14,14 +13,20 @@ public class PlatformMovementEditor : Editor
         PlatformMovement platformMovement = (PlatformMovement)target;
         GUILayout.BeginHorizontal();
         index = EditorGUILayout.IntSlider(index, 0, ((PlatformMovement)target).movementPoints.Count - 1);
+        if (GUILayout.Button("Try Position"))
+        {
+            platformMovement.SetPositionPlatform(index);
+        }
         if (GUILayout.Button("Update"))
         {
             platformMovement.UpdatePosition(index);
+            platformMovement.SetPositionPlatform(index);
         }
         GUILayout.EndHorizontal();
         if (GUILayout.Button("Create new point"))
         {
             platformMovement.CreateNewPoint();
+            platformMovement.SetPositionPlatform(index);
         }
     }
 }

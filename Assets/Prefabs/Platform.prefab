@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2013053171
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -139912711, guid: 78bbde29a5658a4449ca878a56f10cce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6730010842840057829}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f6d272a35b5b5e045a3da44788180797, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -124,12 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9358f8442f5054bba52823019cb60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailColor: {r: 0.061502934, g: 0, b: 1, a: 1}
-  platformSpeed: 1
-  movementPoints:
-  - m_Position: {x: 8.34, y: -4.26}
-    m_TimeStay: 0
-    m_color: {r: 0, g: 1, b: 0, a: 1}
-  - m_Position: {x: 8.34, y: -0.04}
-    m_TimeStay: 0
-    m_color: {r: 1, g: 0, b: 0, a: 1}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
+  platformSpeed: 0
+  timeToTravel: 0
+  movementPoints: []
