@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movementDirection;
     private bool flipedRight;
+    private Transform lastCP;
 
     [SerializeField] private PlayerInputs playerInputs;
     [SerializeField] private Rigidbody2D rb;
@@ -71,6 +72,18 @@ public class PlayerMovement : MonoBehaviour
     {
         flipedRight = !flipedRight;
         transform.rotation = flipedRight ? new Quaternion(0, 0, 0, 1) : new Quaternion(0, 1, 0, 0);
+    }
+
+    public void SetNewCP(Transform transformCP)
+    {
+        lastCP = transformCP;
+    }
+
+    public void Respawn()
+    {
+        rb.isKinematic = true;
+        transform.position = lastCP.position;
+        rb.isKinematic = false;
     }
 
     private void OnDrawGizmos()
