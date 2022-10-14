@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool flipedRight;
     private Transform lastCP;
 
-    [SerializeField] private PlayerInputs playerInputs;
+    [SerializeField] private AllReferencesObjects references;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
 
@@ -26,15 +26,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        playerInputs = new PlayerInputs();
         flipedRight = true;
     }
 
     private void OnEnable()
     {
-        movement = playerInputs.Player.Movement;
+        if (references.playerInputs == null)
+        {
+            Debug.Log("Probleme");
+        }
+        movement = references.playerInputs.Player.Movement;
         movement?.Enable();
-        jump = playerInputs.Player.Jump;
+        jump = references.playerInputs.Player.Jump;
         jump?.Enable();
         jump.performed += OnJump;
     }
