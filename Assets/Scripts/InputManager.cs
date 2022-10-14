@@ -9,5 +9,6 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         playerInputs = new PlayerInputs();
+        GetComponent<ReferencesSetter>().ReconnectValues(ReferencesSetter.ReferencesType.InputManager);
     }
 }

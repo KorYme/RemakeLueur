@@ -12,9 +12,4 @@ public class CameraFollow : MonoBehaviour
         Vector3 smoothPosition = Vector3.Lerp(transform.position, desiredPosition, smoothness);
         transform.position = smoothPosition;
     }
-
-    private void OnValidate()
-    {
-        transform.position = referencesObjects.player.transform.position + offset;
-    }
 }

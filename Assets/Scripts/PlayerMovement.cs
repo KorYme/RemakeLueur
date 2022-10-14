@@ -24,14 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float radiusGC;
 
-
     private void Start()
     {
         flipedRight = true;
-    }
-
-    private void OnEnable()
-    {
         inputManager = references.inputManager;
         movement = inputManager.playerInputs.Player.Movement;
         movement?.Enable();
