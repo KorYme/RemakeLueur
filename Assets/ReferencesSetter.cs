@@ -9,7 +9,7 @@ public class ReferencesSetter : MonoBehaviour
         Camera,
         Player,
         PlayerMovement,
-        PlayerInputs,
+        InputManager,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -49,8 +49,8 @@ public class ReferencesSetter : MonoBehaviour
             case ReferencesType.PlayerMovement:
                 references.playerMovement = GetComponent<PlayerMovement>();
                 return;
-            case ReferencesType.PlayerInputs:
-                references.playerInputs = GetComponent<InputManager>().playerInputs;
+            case ReferencesType.InputManager:
+                references.inputManager = GetComponent<InputManager>();
                 return;
             default:
                 return;

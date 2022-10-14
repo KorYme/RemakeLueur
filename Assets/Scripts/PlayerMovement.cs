@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private InputManager inputManager;
     private InputAction movement;
     private InputAction jump;
 
@@ -24,20 +25,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float radiusGC;
 
 
-    private void Awake()
+    private void Start()
     {
         flipedRight = true;
     }
 
     private void OnEnable()
     {
-        if (references.playerInputs == null)
-        {
-            Debug.Log("Probleme");
-        }
-        movement = references.playerInputs.Player.Movement;
+        inputManager = references.inputManager;
+        movement = inputManager.playerInputs.Player.Movement;
         movement?.Enable();
-        jump = references.playerInputs.Player.Jump;
+        jump = inputManager.playerInputs.Player.Jump;
         jump?.Enable();
         jump.performed += OnJump;
     }

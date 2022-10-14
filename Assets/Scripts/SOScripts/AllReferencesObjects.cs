@@ -9,5 +9,5 @@ public class AllReferencesObjects : ScriptableObject
     public Camera camera;
     public GameObject player;
     public PlayerMovement playerMovement;
-    public PlayerInputs playerInputs;
+    public InputManager inputManager;
 }
