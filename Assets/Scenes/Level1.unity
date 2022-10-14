@@ -785,6 +785,7 @@ MonoBehaviour:
   fireBallSpawn: {fileID: 2069370235}
   fireBallGameObject: {fileID: 124620772331088928, guid: 0aa9f6b69561bd142b5af91a78f31886, type: 3}
   fireBallSpeed: 10
+  cdTimeFire: 3
 --- !u!1 &947399151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6858,6 +6859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65009ff623e1065499826cc4880d6cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
 --- !u!1 &1155479100
 GameObject:
   m_ObjectHideFlags: 0

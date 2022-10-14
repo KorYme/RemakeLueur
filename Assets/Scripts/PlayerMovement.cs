@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private InputAction jump;
 
     private Vector2 movementDirection;
-    private bool flipedRight;
+    private bool flipedRight = true;
     private Transform lastCP;
 
     [SerializeField] private AllReferencesObjects references;
@@ -24,9 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float radiusGC;
 
-    private void Start()
+    private void OnEnable()
     {
-        flipedRight = true;
+        if (references.inputManager.playerInputs == null) return;
         inputManager = references.inputManager;
         movement = inputManager.playerInputs.Player.Movement;
         movement?.Enable();
