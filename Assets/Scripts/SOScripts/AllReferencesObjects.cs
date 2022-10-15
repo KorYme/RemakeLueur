@@ -10,4 +10,6 @@ public class AllReferencesObjects : ScriptableObject
     public GameObject player;
     public PlayerMovement playerMovement;
     public InputManager inputManager;
+    public FireBallThrow fireBallThrow;
+    public PlayerInteraction playerInteraction;
 }

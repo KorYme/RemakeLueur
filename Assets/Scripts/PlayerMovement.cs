@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementDirection;
     private bool flipedRight = true;
     private Transform lastCP;
+    private UnityAction AnimationChecks;
 
     [SerializeField] private AllReferencesObjects references;
     [SerializeField] private Rigidbody2D rb;
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        AnimationChecks?.Invoke();
         movementDirection = movement.ReadValue<Vector2>();
     }
 
@@ -58,10 +61,44 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void AddCheckLanding()
+    {
+        AnimationChecks = CheckLanding;
+    }
+
+    private void CheckLanding()
+    {
+        if (rb.velocity.y <= 0)
+        {
+            animator.SetTrigger("Landing");
+            AnimationChecks -= CheckLanding;
+        }
+    }
+
+    public void AddCheckGround()
+    {
+        AnimationChecks = CheckGround;
+    }
+
+    private void CheckGround()
+    {
+        if (TouchGround())
+        {
+            animator.SetTrigger("Floor");
+            AnimationChecks -= CheckGround;
+        }
+    }
+
+    private bool TouchGround()
+    {
+        return Physics2D.OverlapCircle(centerPointGC.position, radiusGC, groundLayer);
+    }
+
     private void Jump()
     {
-        if (!Physics2D.OverlapCircle(centerPointGC.position, radiusGC, groundLayer)) return;
+        if (!TouchGround()) return;
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        animator.SetTrigger("Jump");
     }
 
     private void Flip()

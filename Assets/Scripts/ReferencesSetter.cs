@@ -10,6 +10,8 @@ public class ReferencesSetter : MonoBehaviour
         Player,
         PlayerMovement,
         InputManager,
+        FireBallThrow,
+        PlayerInteraction,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -51,6 +53,12 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.InputManager:
                 references.inputManager = GetComponent<InputManager>();
+                return;
+            case ReferencesType.FireBallThrow:
+                references.fireBallThrow = GetComponent<FireBallThrow>();
+                return;
+            case ReferencesType.PlayerInteraction:
+                references.playerInteraction = GetComponent<PlayerInteraction>();
                 return;
             default:
                 return;
