@@ -12,14 +12,15 @@ public class ReferencesSetter : MonoBehaviour
         InputManager,
         FireBallThrow,
         PlayerInteraction,
+        SummonSmallCire,
     }
 
     [SerializeField] private AllReferencesObjects references;
-    [SerializeField] private ReferencesType[] objects;
+    [SerializeField] private ReferencesType[] referencesTypes;
 
     private void Awake()
     {
-        foreach (ReferencesType item in objects)
+        foreach (ReferencesType item in referencesTypes)
         {
             ConnectValues(item);
         }
@@ -30,11 +31,45 @@ public class ReferencesSetter : MonoBehaviour
         ConnectValues(item);
     }
     
-    public void ReconnectValues(ReferencesType[] items)
+    public void ReconnectAllValues()
     {
-        foreach (ReferencesType item in items)
+        foreach (ReferencesType item in referencesTypes)
         {
             ConnectValues(item);
+        }
+    }
+
+    public void EnableOrDisableAllValues(bool enable, List<ReferencesType> referencesTypesNoUse = null)
+    {
+        foreach (ReferencesType item in referencesTypes)
+        {
+            if (referencesTypesNoUse.Contains(item)) continue;
+            switch (item)
+            {
+                case ReferencesType.Player:
+                    references.player.SetActive(enable);
+                    return;
+                case ReferencesType.Camera:
+                    references.camera.enabled = enable;
+                    return;
+                case ReferencesType.PlayerMovement:
+                    references.playerMovement.enabled = enable;
+                    return;
+                case ReferencesType.InputManager:
+                    references.inputManager.enabled = enable;
+                    return;
+                case ReferencesType.FireBallThrow:
+                    references.fireBallThrow.enabled = enable;
+                    return;
+                case ReferencesType.PlayerInteraction:
+                    references.playerInteraction.enabled = enable;
+                    return;
+                case ReferencesType.SummonSmallCire:
+                    references.summonSmallCire.enabled = enable;
+                    return;
+                default:
+                    return;
+            }
         }
     }
 
@@ -59,6 +94,9 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.PlayerInteraction:
                 references.playerInteraction = GetComponent<PlayerInteraction>();
+                return;
+            case ReferencesType.SummonSmallCire:
+                references.summonSmallCire = GetComponent<SummonSmallCire>();
                 return;
             default:
                 return;

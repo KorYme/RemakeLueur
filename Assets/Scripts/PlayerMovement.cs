@@ -7,16 +7,15 @@ using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private InputManager inputManager;
-    private InputAction movement;
-    private InputAction jump;
+    protected InputManager inputManager;
+    protected InputAction movement;
+    protected InputAction jump;
 
     private Vector2 movementDirection;
     private bool flipedRight = true;
-    private Transform lastCP;
     private UnityAction AnimationChecks;
 
-    [SerializeField] private AllReferencesObjects references;
+    [SerializeField] protected AllReferencesObjects references;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
 
@@ -25,10 +24,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform centerPointGC;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float radiusGC;
+    [SerializeField] private Transform lastCP;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
-        if (references.inputManager.playerInputs == null) return;
+        //if (references.inputManager.playerInputs == null) return;
         inputManager = references.inputManager;
         movement = inputManager.playerInputs.Player.Movement;
         movement?.Enable();
@@ -40,10 +40,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         movement?.Disable();
+        movementDirection = Vector2.zero;
         jump?.Disable();
     }
 
-    private void OnJump(InputAction.CallbackContext ctx) => Jump();
+    protected void OnJump(InputAction.CallbackContext ctx) => Jump();
 
     private void Update()
     {
@@ -112,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         lastCP = transformCP;
     }
 
-    public void Respawn()
+    public virtual void Respawn()
     {
         rb.isKinematic = true;
         transform.position = lastCP.position;

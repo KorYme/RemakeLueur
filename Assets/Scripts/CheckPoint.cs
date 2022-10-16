@@ -8,7 +8,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerMovement>().SetNewCP(transform);
+            collision.GetComponent<PlayerMovement>()?.SetNewCP(transform);
         }
     }
 }

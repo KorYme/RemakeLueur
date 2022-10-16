@@ -12,4 +12,5 @@ public class AllReferencesObjects : ScriptableObject
     public InputManager inputManager;
     public FireBallThrow fireBallThrow;
     public PlayerInteraction playerInteraction;
+    public SummonSmallCire summonSmallCire;
 }
