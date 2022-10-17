@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class SummonSmallCire : MonoBehaviour
     [SerializeField] private Transform spawnNewSmallCire;
     [SerializeField] private GameObject smallCireGameObject;
 
+    private bool isSummoned;
     private InputAction summon;
 
     private void OnEnable()
@@ -17,6 +19,7 @@ public class SummonSmallCire : MonoBehaviour
         summon = references.inputManager.playerInputs.Player.Summon;
         summon?.Enable();
         summon.performed += OnSummon;
+        isSummoned = false;
     }
 
     private void OnDisable()
@@ -28,14 +31,26 @@ public class SummonSmallCire : MonoBehaviour
 
     public void SummonAndGiveControl()
     {
-        referencesSetter.EnableOrDisableAllValues(false, new List<ReferencesSetter.ReferencesType> { ReferencesSetter.ReferencesType.Player, ReferencesSetter.ReferencesType.SummonSmallCire });
+        if (isSummoned) return;
+        isSummoned = true;
+        references.playerMovement.rb.bodyType = RigidbodyType2D.Static;
+        EnableScripts(false);
         GameObject smallCire = Instantiate(smallCireGameObject, spawnNewSmallCire.position, Quaternion.identity);
         smallCire.GetComponent<SmallCireMovement>().InitializeNewPlayer(this);
     }
 
     public void RetakeControl()
     {
+        references.playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
         referencesSetter.ReconnectAllValues();
-        referencesSetter.EnableOrDisableAllValues(true);
+        EnableScripts(true);
+        isSummoned = false;
+    }
+
+    private void EnableScripts(bool enable)
+    {
+        references.playerMovement.enabled = enable;
+        references.fireBallThrow.enabled = enable;
+        //references.playerInteraction.enabled = enable;
     }
 }

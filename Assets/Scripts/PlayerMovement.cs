@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private UnityAction AnimationChecks;
 
     [SerializeField] protected AllReferencesObjects references;
-    [SerializeField] private Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField] private Animator animator;
 
     [SerializeField] private float speed;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform centerPointGC;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float radiusGC;
-    [SerializeField] private Transform lastCP;
+    public Transform lastCP;
 
     protected virtual void OnEnable()
     {

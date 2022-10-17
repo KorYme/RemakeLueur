@@ -30,4 +30,13 @@ public class Cooldowns
             finished = true;
         }
     }
+
+    public void SetNewTimer(float newTimer)
+    {
+        maxTimer = newTimer;
+        if (currentTimer > maxTimer)
+        {
+            currentTimer = maxTimer;
+        }
+    }
 }
