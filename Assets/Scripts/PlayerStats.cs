@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] private float basicDamage;
     [SerializeField] private float maxHealth;
     private float currentHealth;
     private States cireState;
@@ -19,9 +20,9 @@ public class PlayerStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float nbDamage)
+    public void TakeDamage(float nbDamage = -1f)
     {
-        currentHealth -= nbDamage;
+        currentHealth -= nbDamage < 0 ? basicDamage : nbDamage;
         UpdateState();
         if (cireState == States.Dead)
         {

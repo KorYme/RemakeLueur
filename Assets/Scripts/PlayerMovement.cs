@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private bool TouchGround()
+    public bool TouchGround()
     {
         if (centerPointGC == null) return false;
         return Physics2D.OverlapCircle(centerPointGC.position, radiusGC, groundLayer);
@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     public virtual void Respawn()
     {
+        references.playerStats.TakeDamage();
         rb.isKinematic = true;
         transform.position = lastCP.position;
         rb.isKinematic = false;
