@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 942679076}
   - component: {fileID: 942679077}
   - component: {fileID: 942679074}
+  - component: {fileID: 942679081}
   - component: {fileID: 942679079}
   - component: {fileID: 942679080}
   - component: {fileID: 942679078}
@@ -856,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
-  referencesTypes: 02000000030000000500000007000000
+  referencesTypes: 0200000003000000050000000700000008000000
 --- !u!114 &942679079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +891,19 @@ MonoBehaviour:
   referencesSetter: {fileID: 942679078}
   spawnNewSmallCire: {fileID: 1216596067}
   smallCireGameObject: {fileID: 2802008390326273106, guid: 26c6d25060f46474f808e48af146cc69, type: 3}
+--- !u!114 &942679081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942679070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe0b0e9b762ff1489e306cb0a3ff879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &947399151
 GameObject:
   m_ObjectHideFlags: 0

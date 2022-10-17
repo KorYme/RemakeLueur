@@ -10,6 +10,7 @@ public class SummonSmallCire : MonoBehaviour
     [SerializeField] private ReferencesSetter referencesSetter;
     [SerializeField] private Transform spawnNewSmallCire;
     [SerializeField] private GameObject smallCireGameObject;
+    private GameObject smallCire;
 
     private bool isSummoned;
     private InputAction summon;
@@ -31,12 +32,19 @@ public class SummonSmallCire : MonoBehaviour
 
     public void SummonAndGiveControl()
     {
-        if (isSummoned) return;
-        isSummoned = true;
-        references.playerMovement.rb.bodyType = RigidbodyType2D.Static;
-        EnableScripts(false);
-        GameObject smallCire = Instantiate(smallCireGameObject, spawnNewSmallCire.position, Quaternion.identity);
-        smallCire.GetComponent<SmallCireMovement>().InitializeNewPlayer(this);
+        if (isSummoned)
+        {
+            smallCire.GetComponent<SmallCireMovement>().Respawn();
+        }
+        else
+        {
+            isSummoned = true;
+            references.playerMovement.rb.bodyType = RigidbodyType2D.Static;
+            EnableScripts(false);
+            GetComponent<Animator>().SetFloat("Speed", 0f);
+            smallCire = Instantiate(smallCireGameObject, spawnNewSmallCire.position, Quaternion.identity);
+            smallCire.GetComponent<SmallCireMovement>().InitializeNewPlayer(this);
+        }
     }
 
     public void RetakeControl()

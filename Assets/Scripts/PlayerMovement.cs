@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
-    [SerializeField] private Transform centerPointGC;
+    [SerializeField] protected Transform centerPointGC;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float radiusGC;
     public Transform lastCP;
@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool TouchGround()
     {
+        if (centerPointGC == null) return false;
         return Physics2D.OverlapCircle(centerPointGC.position, radiusGC, groundLayer);
     }
 

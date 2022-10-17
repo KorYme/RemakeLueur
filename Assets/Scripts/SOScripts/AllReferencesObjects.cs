@@ -13,4 +13,5 @@ public class AllReferencesObjects : ScriptableObject
     public FireBallThrow fireBallThrow;
     public PlayerInteraction playerInteraction;
     public SummonSmallCire summonSmallCire;
+    public PlayerStats playerStats;
 }

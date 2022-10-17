@@ -14,6 +14,7 @@ public class ReferencesSetter : MonoBehaviour
         FireBallThrow,
         PlayerInteraction,
         SummonSmallCire,
+        PlayerStats,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -64,6 +65,9 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.SummonSmallCire:
                 references.summonSmallCire = GetComponent<SummonSmallCire>();
+                return;
+            case ReferencesType.PlayerStats:
+                references.playerStats = GetComponent<PlayerStats>();
                 return;
             default:
                 return;

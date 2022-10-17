@@ -21,6 +21,12 @@ public class SmallCireMovement : PlayerMovement
         player = summonSmallCire;
     }
 
+    public void TakeDamage()
+    {
+        references.playerStats.TakeDamage(20f);
+        Respawn();
+    }
+
     public override void Respawn()
     {
         player.RetakeControl();
