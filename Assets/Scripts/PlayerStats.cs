@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float basicDamage;
     [SerializeField] private float maxHealth;
-    private float currentHealth;
+    [SerializeField] private float basicDamage;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AllReferencesObjects references;
+    [SerializeField][ReadOnlyInspector] private float currentHealth;
     private States cireState;
 
     public enum States
@@ -24,6 +26,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= nbDamage < 0 ? basicDamage : nbDamage;
         UpdateState();
+        UpdateHealthBar();
         if (cireState == States.Dead)
         {
             Death();
@@ -32,7 +35,16 @@ public class PlayerStats : MonoBehaviour
 
     private void Death()
     {
-        //Behaviour Death
+        references.fireBallThrow.enabled = false;
+        references.playerMovement.enabled = false;
+        references.summonSmallCire.enabled = false;
+        animator.SetTrigger("Death");
+    }
+
+    public void AnimationAfterDeath()
+    {
+        Time.timeScale = 0;
+        //Display death menu
     }
 
     private void UpdateState()

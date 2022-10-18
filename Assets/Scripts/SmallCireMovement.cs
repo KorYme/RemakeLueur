@@ -23,8 +23,8 @@ public class SmallCireMovement : PlayerMovement
 
     public override void Respawn()
     {
-        references.playerStats.TakeDamage();
         player.RetakeControl();
+        references.playerStats.TakeDamage();
         Destroy(gameObject);
     }
 }

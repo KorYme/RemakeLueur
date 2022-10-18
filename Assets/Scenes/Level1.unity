@@ -905,8 +905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe0b0e9b762ff1489e306cb0a3ff879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicDamage: 15
   maxHealth: 100
+  basicDamage: 100
+  animator: {fileID: 942679077}
+  references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
+  currentHealth: 0
 --- !u!1 &947399151
 GameObject:
   m_ObjectHideFlags: 0
