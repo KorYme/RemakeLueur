@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class InteractionScript : MonoBehaviour , InteractableObjects
 {
-    private enum Behaviours
+    private enum InteractionBehaviours
     {
         None,
         Destroy,
     }
 
-    [SerializeField] private Behaviours behaviour = Behaviours.None;
-    [SerializeField] private GameObject waterFall;
+    [SerializeField] private InteractionBehaviours behaviour = InteractionBehaviours.None;
+    public float salut = 0;
+    [DrawIf("behaviour", InteractionBehaviours.Destroy, DisablingType.Draw)][SerializeField] private GameObject objectToDestroy;
 
     public void Interact()
     {
         switch (behaviour)
         {
-            case Behaviours.None:
+            case InteractionBehaviours.None:
                 return;
-            case Behaviours.Destroy:
-                waterFall.SetActive(false);
+            case InteractionBehaviours.Destroy:
+                objectToDestroy.SetActive(false);
                 return;
         }
     }

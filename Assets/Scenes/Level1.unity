@@ -7030,7 +7030,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviour: 1
-  waterFall: {fileID: 1731512408}
+  salut: -1
+  objectToDestroy: {fileID: 1731512408}
 --- !u!61 &987997082
 BoxCollider2D:
   m_ObjectHideFlags: 0
