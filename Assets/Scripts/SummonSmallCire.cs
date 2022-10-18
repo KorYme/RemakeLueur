@@ -50,7 +50,7 @@ public class SummonSmallCire : MonoBehaviour
     {
         if (isSummoned)
         {
-            smallCire.GetComponent<SmallCireMovement>().Respawn();
+            smallCire.GetComponent<SmallCireMovement>().Respawn(false);
         }
         else if (playerMovement.TouchGround() && playerMovement.rb.velocity.magnitude <= 0.1f && cdSummon.finished)
         {

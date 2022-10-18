@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     private InputManager inputManager;
     private InputAction interact;
 
+    private InteractableObjects lastTouchedObjects;
+
     [SerializeField] private AllReferencesObjects references;
 
     private void OnEnable()
@@ -24,10 +26,28 @@ public class PlayerInteraction : MonoBehaviour
         interact?.Disable();
     }
 
-    private void OnInteraction(InputAction.CallbackContext ctx) => Interact();
-
-    private void Interact()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.GetComponent<InteractableObjects>() != null)
+        {
+            lastTouchedObjects = collision.GetComponent<InteractableObjects>();
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<InteractableObjects>() == lastTouchedObjects)
+        {
+            lastTouchedObjects = null;
+        }
+    }
+
+    private void OnInteraction(InputAction.CallbackContext ctx) => InteractWith();
+
+    private void InteractWith()
+    {
+        if (lastTouchedObjects == null) return;
+        lastTouchedObjects.Interact();
+        lastTouchedObjects = null;
     }
 }

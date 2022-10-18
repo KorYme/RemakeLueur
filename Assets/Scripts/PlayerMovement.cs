@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         lastCP = transformCP;
     }
 
-    public virtual void Respawn()
+    public virtual void Respawn(bool damaged = true)
     {
         references.playerStats.TakeDamage();
         rb.isKinematic = true;

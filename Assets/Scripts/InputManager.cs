@@ -17,5 +17,6 @@ public class InputManager : MonoBehaviour
         references.playerMovement.enabled = true;
         references.fireBallThrow.enabled = true;
         references.summonSmallCire.enabled = true;
+        references.playerInteraction.enabled = true;
     }
 }
