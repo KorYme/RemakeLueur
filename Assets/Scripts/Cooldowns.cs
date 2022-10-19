@@ -15,8 +15,9 @@ public class Cooldowns
         finished = true;
     }
 
-    public void ResetCD()
+    public void ResetCD(float newTimer = -1)
     {
+        maxTimer = newTimer > 0 ? newTimer : maxTimer;
         currentTimer = maxTimer;
         finished = false;
     }
@@ -28,15 +29,6 @@ public class Cooldowns
         if (currentTimer <= 0)
         {
             finished = true;
-        }
-    }
-
-    public void SetNewTimer(float newTimer)
-    {
-        maxTimer = newTimer;
-        if (currentTimer > maxTimer)
-        {
-            currentTimer = maxTimer;
         }
     }
 }

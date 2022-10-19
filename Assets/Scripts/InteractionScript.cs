@@ -8,11 +8,13 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
     {
         None,
         Destroy,
+        Animation
     }
 
     [SerializeField] private InteractionBehaviours behaviour = InteractionBehaviours.None;
-    public float salut = 0;
     [DrawIf("behaviour", InteractionBehaviours.Destroy, DisablingType.Draw)][SerializeField] private GameObject objectToDestroy;
+    [DrawIf("behaviour", InteractionBehaviours.Animation, DisablingType.Draw)][SerializeField] private Animator animator;
+    [DrawIf("behaviour", InteractionBehaviours.Animation, DisablingType.Draw)][SerializeField] private string triggerToPlay;
 
     public void Interact()
     {
@@ -22,6 +24,9 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
                 return;
             case InteractionBehaviours.Destroy:
                 objectToDestroy.SetActive(false);
+                return;
+            case InteractionBehaviours.Animation:
+                animator.SetTrigger(triggerToPlay);
                 return;
         }
     }

@@ -16,7 +16,7 @@ public class PlatformMovement : MonoBehaviour
 
     [SerializeField] private Color trailColor;
     [SerializeField] private float platformSpeed;
-    [SerializeField][ReadOnlyInspector] private float timeToTravel;
+    [SerializeField][DrawIf(true, DisablingType.ReadOnly)] private float timeToTravel;
     public List<MovementPoint> movementPoints;
 
     private UnityAction MoveAction;

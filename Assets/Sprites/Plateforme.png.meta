@@ -130,6 +130,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Plateforme_0
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1553
+        width: 840
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125e3d547e5acd4488d6043f50dc45f0
+      internalID: 1899058503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -143,13 +164,13 @@ TextureImporter:
     nameFileIdTable:
       Tileset lueur calque par calque_31: 1264920915
       Tileset lueur calque par calque_14: 1876164932
-      Tileset lueur calque par calque_8: -1974869912
-      Tileset lueur calque par calque_19: 1563011448
+      Tileset lueur calque par calque_66: -1764405117
       Tileset lueur calque par calque_24: -215548728
       Tileset lueur calque par calque_48: 949558048
       Tileset lueur calque par calque_42: -67561588
       Tileset lueur calque par calque_21: -169403725
       Tileset lueur calque par calque_16: -658089540
+      Tileset lueur calque par calque_30: -2083566148
       Tileset lueur calque par calque_54: -572282630
       Tileset lueur calque par calque_0: -1805649850
       Tileset lueur calque par calque_38: 1233180256
@@ -180,6 +201,7 @@ TextureImporter:
       Tileset lueur calque par calque_22: 1965921669
       Tileset lueur calque par calque_68: -445639260
       Tileset lueur calque par calque_1: 303248844
+      Plateforme_0: 1899058503
       Tileset lueur calque par calque_17: 944706319
       Tileset lueur calque par calque_5: -722422660
       Tileset lueur calque par calque_6: -1390692834
@@ -209,11 +231,11 @@ TextureImporter:
       Tileset lueur calque par calque_26: 1249747790
       Tileset lueur calque par calque_56: -1371944266
       Tileset lueur calque par calque_35: -1489316073
-      Tileset lueur calque par calque_30: -2083566148
-      Tileset lueur calque par calque_67: -70250456
       Tileset lueur calque par calque_11: -1531930510
+      Tileset lueur calque par calque_67: -70250456
       Tileset lueur calque par calque_37: 1868218490
-      Tileset lueur calque par calque_66: -1764405117
+      Tileset lueur calque par calque_19: 1563011448
+      Tileset lueur calque par calque_8: -1974869912
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

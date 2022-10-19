@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float basicDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private AllReferencesObjects references;
-    [SerializeField][ReadOnlyInspector] private float currentHealth;
+    [SerializeField][DrawIf(true, DisablingType.ReadOnly)] private float currentHealth;
     private States cireState;
 
     public enum States

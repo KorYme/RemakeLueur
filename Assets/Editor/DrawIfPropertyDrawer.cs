@@ -12,7 +12,7 @@ public class DrawIfPropertyDrawer : PropertyDrawer
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        if (!ShowMe(property))
+        if ((attribute as DrawIfAttribute).simpleBoolean ? false : !ShowMe(property))
         {
             return 0f;
         }
@@ -43,10 +43,10 @@ public class DrawIfPropertyDrawer : PropertyDrawer
             case "byte":
             case "short":
             case "uint":
-                return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
+                return CompareInt(drawIfAttribute.comparisonType);
             case "float":
             case "double":
-                return comparedField.floatValue.Equals(drawIfAttribute.comparedValue);
+                return CompareFloat(drawIfAttribute.comparisonType);
             default:
                 Debug.Log("The type " + comparedField.type + " of this field is not supported");
                 return false;
@@ -59,16 +59,39 @@ public class DrawIfPropertyDrawer : PropertyDrawer
         {
             case ComparisonType.Equals:
                 return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
+                //return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
             case ComparisonType.NotEqual:
                 return !comparedField.intValue.Equals(drawIfAttribute.comparedValue);
             case ComparisonType.GreaterThan:
-                return false;
+                return comparedField.intValue > (int)drawIfAttribute.comparedValue;
             case ComparisonType.SmallerThan:
-                return false;
+                return comparedField.intValue < (int)drawIfAttribute.comparedValue;
             case ComparisonType.SmallerOrEqual:
-                return false;
+                return comparedField.intValue <= (int)drawIfAttribute.comparedValue;
             case ComparisonType.GreaterOrEqual:
+                return comparedField.intValue >= (int)drawIfAttribute.comparedValue;
+            default:
                 return false;
+        }
+    }
+
+    private bool CompareFloat(ComparisonType comparisonType)
+    {
+        switch (comparisonType)
+        {
+            case ComparisonType.Equals:
+                return comparedField.floatValue.Equals(drawIfAttribute.comparedValue);
+            //return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
+            case ComparisonType.NotEqual:
+                return !comparedField.floatValue.Equals(drawIfAttribute.comparedValue);
+            case ComparisonType.GreaterThan:
+                return comparedField.floatValue > (float)drawIfAttribute.comparedValue;
+            case ComparisonType.SmallerThan:
+                return comparedField.floatValue < (float)drawIfAttribute.comparedValue;
+            case ComparisonType.SmallerOrEqual:
+                return comparedField.floatValue <= (float)drawIfAttribute.comparedValue;
+            case ComparisonType.GreaterOrEqual:
+                return comparedField.floatValue >= (float)drawIfAttribute.comparedValue;
             default:
                 return false;
         }
@@ -76,7 +99,7 @@ public class DrawIfPropertyDrawer : PropertyDrawer
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        if (ShowMe(property))
+        if ((attribute as DrawIfAttribute).simpleBoolean ? true : ShowMe(property))
         {
             if (drawIfAttribute.disablingType == DisablingType.ReadOnly)
             {
