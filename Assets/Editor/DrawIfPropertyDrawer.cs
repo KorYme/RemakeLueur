@@ -8,8 +8,6 @@ public class DrawIfPropertyDrawer : PropertyDrawer
 
     SerializedProperty comparedField;
 
-    private float propertyHeight;
-
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
         if ((attribute as DrawIfAttribute).simpleBoolean ? false : !ShowMe(property))
@@ -55,50 +53,35 @@ public class DrawIfPropertyDrawer : PropertyDrawer
 
     private bool CompareInt(ComparisonType comparisonType)
     {
-        switch (comparisonType)
+        return comparisonType switch
         {
-            case ComparisonType.Equals:
-                return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
-                //return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
-            case ComparisonType.NotEqual:
-                return !comparedField.intValue.Equals(drawIfAttribute.comparedValue);
-            case ComparisonType.GreaterThan:
-                return comparedField.intValue > (int)drawIfAttribute.comparedValue;
-            case ComparisonType.SmallerThan:
-                return comparedField.intValue < (int)drawIfAttribute.comparedValue;
-            case ComparisonType.SmallerOrEqual:
-                return comparedField.intValue <= (int)drawIfAttribute.comparedValue;
-            case ComparisonType.GreaterOrEqual:
-                return comparedField.intValue >= (int)drawIfAttribute.comparedValue;
-            default:
-                return false;
-        }
+            ComparisonType.Equals => comparedField.intValue.Equals(drawIfAttribute.comparedValue),
+            ComparisonType.NotEqual => !comparedField.intValue.Equals(drawIfAttribute.comparedValue),
+            ComparisonType.GreaterThan => comparedField.intValue > (int)drawIfAttribute.comparedValue,
+            ComparisonType.SmallerThan => comparedField.intValue < (int)drawIfAttribute.comparedValue,
+            ComparisonType.SmallerOrEqual => comparedField.intValue <= (int)drawIfAttribute.comparedValue,
+            ComparisonType.GreaterOrEqual => comparedField.intValue >= (int)drawIfAttribute.comparedValue,
+            _ => false,
+        };
     }
 
     private bool CompareFloat(ComparisonType comparisonType)
     {
-        switch (comparisonType)
+        return comparisonType switch
         {
-            case ComparisonType.Equals:
-                return comparedField.floatValue.Equals(drawIfAttribute.comparedValue);
-            //return comparedField.intValue.Equals(drawIfAttribute.comparedValue);
-            case ComparisonType.NotEqual:
-                return !comparedField.floatValue.Equals(drawIfAttribute.comparedValue);
-            case ComparisonType.GreaterThan:
-                return comparedField.floatValue > (float)drawIfAttribute.comparedValue;
-            case ComparisonType.SmallerThan:
-                return comparedField.floatValue < (float)drawIfAttribute.comparedValue;
-            case ComparisonType.SmallerOrEqual:
-                return comparedField.floatValue <= (float)drawIfAttribute.comparedValue;
-            case ComparisonType.GreaterOrEqual:
-                return comparedField.floatValue >= (float)drawIfAttribute.comparedValue;
-            default:
-                return false;
-        }
+            ComparisonType.Equals => comparedField.floatValue.Equals(drawIfAttribute.comparedValue),
+            ComparisonType.NotEqual => !comparedField.floatValue.Equals(drawIfAttribute.comparedValue),
+            ComparisonType.GreaterThan => comparedField.floatValue > (float)drawIfAttribute.comparedValue,
+            ComparisonType.SmallerThan => comparedField.floatValue < (float)drawIfAttribute.comparedValue,
+            ComparisonType.SmallerOrEqual => comparedField.floatValue <= (float)drawIfAttribute.comparedValue,
+            ComparisonType.GreaterOrEqual => comparedField.floatValue >= (float)drawIfAttribute.comparedValue,
+            _ => false,
+        };
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        drawIfAttribute = attribute as DrawIfAttribute;
         if ((attribute as DrawIfAttribute).simpleBoolean ? true : ShowMe(property))
         {
             if (drawIfAttribute.disablingType == DisablingType.ReadOnly)
