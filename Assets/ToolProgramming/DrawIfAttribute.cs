@@ -11,7 +11,7 @@ using UnityEngine;
 public class DrawIfAttribute : PropertyAttribute
 {
     public string comparedPropertyName;
-    public object comparedValue;
+    public object[] comparedValues;
     public bool simpleBoolean = false;
     public ComparisonType comparisonType;
     public DisablingType trueCaseDisablingType;
@@ -21,7 +21,18 @@ public class DrawIfAttribute : PropertyAttribute
         DisablingType trueCaseDisablingType = DisablingType.Draw, DisablingType falseCaseDisablingType = DisablingType.DontDraw)
     {
         this.comparedPropertyName = comparedPropertyName;
-        this.comparedValue = comparedValue;
+        this.comparedValues = new object[] {comparedValue};
+        this.comparisonType = comparisonType;
+        this.trueCaseDisablingType = trueCaseDisablingType;
+        this.falseCaseDisablingType = falseCaseDisablingType;
+        simpleBoolean = false;
+    }
+    
+    public DrawIfAttribute(string comparedPropertyName, object[] comparedValue, ComparisonType comparisonType = ComparisonType.Equals,
+        DisablingType trueCaseDisablingType = DisablingType.Draw, DisablingType falseCaseDisablingType = DisablingType.DontDraw)
+    {
+        this.comparedPropertyName = comparedPropertyName;
+        this.comparedValues = comparedValue;
         this.comparisonType = comparisonType;
         this.trueCaseDisablingType = trueCaseDisablingType;
         this.falseCaseDisablingType = falseCaseDisablingType;
@@ -32,7 +43,7 @@ public class DrawIfAttribute : PropertyAttribute
     DisablingType trueCaseDisablingType = DisablingType.Draw, DisablingType falseCaseDisablingType = DisablingType.DontDraw)
     {
         this.comparedPropertyName = null;
-        this.comparedValue = null;
+        this.comparedValues = null;
         this.comparisonType = ComparisonType.Equals;
         this.simpleBoolean = simpleBoolean;
         this.trueCaseDisablingType = trueCaseDisablingType;

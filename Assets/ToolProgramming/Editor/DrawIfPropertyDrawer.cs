@@ -32,51 +32,58 @@ public class DrawIfPropertyDrawer : PropertyDrawer
             Debug.LogError("Cannot find property with name: " + path);
             return false;
         }
-        switch (comparedField.type)
+        foreach (object item in drawIfAttribute.comparedValues)
         {
-            case "bool":
-                return comparedField.boolValue.Equals(drawIfAttribute.comparedValue);
-            case "Enum":
-                return comparedField.enumValueIndex.Equals((int)drawIfAttribute.comparedValue);
-            case "int":
-            case "long":
-            case "byte":
-            case "short":
-            case "uint":
-                return CompareInt(drawIfAttribute.comparisonType);
-            case "float":
-            case "double":
-                return CompareFloat(drawIfAttribute.comparisonType);
-            default:
-                Debug.Log("The type " + comparedField.type + " of this field is not supported");
-                return false;
+            switch (comparedField.type)
+            {
+                case "bool":
+                    if (comparedField.boolValue.Equals(item)) return true;
+                    break; 
+                case "Enum":
+                    if (comparedField.enumValueIndex.Equals((int)item)) return true;
+                    break;
+                case "int":
+                case "long":
+                case "byte":
+                case "short":
+                case "uint":
+                    if (CompareInt(drawIfAttribute.comparisonType, item)) return true;
+                    break;
+                case "float":
+                case "double":
+                    return CompareFloat(drawIfAttribute.comparisonType, item);
+                default:
+                    Debug.Log("The type " + comparedField.type + " of this field is not supported");
+                    break;
+            }
         }
+        return false;
     }
 
-    private bool CompareInt(ComparisonType comparisonType)
+    private bool CompareInt(ComparisonType comparisonType, object item)
     {
         return comparisonType switch
         {
-            ComparisonType.Equals => comparedField.intValue.Equals(drawIfAttribute.comparedValue),
-            ComparisonType.NotEqual => !comparedField.intValue.Equals(drawIfAttribute.comparedValue),
-            ComparisonType.GreaterThan => comparedField.intValue > (int)drawIfAttribute.comparedValue,
-            ComparisonType.SmallerThan => comparedField.intValue < (int)drawIfAttribute.comparedValue,
-            ComparisonType.SmallerOrEqual => comparedField.intValue <= (int)drawIfAttribute.comparedValue,
-            ComparisonType.GreaterOrEqual => comparedField.intValue >= (int)drawIfAttribute.comparedValue,
+            ComparisonType.Equals => comparedField.intValue.Equals(item),
+            ComparisonType.NotEqual => !comparedField.intValue.Equals(item),
+            ComparisonType.GreaterThan => comparedField.intValue > (int)item,
+            ComparisonType.SmallerThan => comparedField.intValue < (int)item,
+            ComparisonType.SmallerOrEqual => comparedField.intValue <= (int)item,
+            ComparisonType.GreaterOrEqual => comparedField.intValue >= (int)item,
             _ => false,
         };
     }
 
-    private bool CompareFloat(ComparisonType comparisonType)
+    private bool CompareFloat(ComparisonType comparisonType, object item)
     {
         return comparisonType switch
         {
-            ComparisonType.Equals => comparedField.floatValue.Equals(drawIfAttribute.comparedValue),
-            ComparisonType.NotEqual => !comparedField.floatValue.Equals(drawIfAttribute.comparedValue),
-            ComparisonType.GreaterThan => comparedField.floatValue > (float)drawIfAttribute.comparedValue,
-            ComparisonType.SmallerThan => comparedField.floatValue < (float)drawIfAttribute.comparedValue,
-            ComparisonType.SmallerOrEqual => comparedField.floatValue <= (float)drawIfAttribute.comparedValue,
-            ComparisonType.GreaterOrEqual => comparedField.floatValue >= (float)drawIfAttribute.comparedValue,
+            ComparisonType.Equals => comparedField.floatValue.Equals(item),
+            ComparisonType.NotEqual => !comparedField.floatValue.Equals(item),
+            ComparisonType.GreaterThan => comparedField.floatValue > (float)item,
+            ComparisonType.SmallerThan => comparedField.floatValue < (float)item,
+            ComparisonType.SmallerOrEqual => comparedField.floatValue <= (float)item,
+            ComparisonType.GreaterOrEqual => comparedField.floatValue >= (float)item,
             _ => false,
         };
     }
