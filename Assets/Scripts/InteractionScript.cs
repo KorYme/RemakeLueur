@@ -12,9 +12,12 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
     }
 
     [SerializeField] private InteractionBehaviours behaviour = InteractionBehaviours.None;
-    [DrawIf("behaviour", InteractionBehaviours.Destroy, DisablingType.Draw)][SerializeField] private GameObject objectToDestroy;
-    [DrawIf("behaviour", InteractionBehaviours.Animation, DisablingType.Draw)][SerializeField] private Animator animator;
-    [DrawIf("behaviour", InteractionBehaviours.Animation, DisablingType.Draw)][SerializeField] private string triggerToPlay;
+    [DrawIf("behaviour", InteractionBehaviours.Destroy, ComparisonType.Equals, DisablingType.Draw)]
+    [SerializeField] private GameObject objectToDestroy;
+    [DrawIf("behaviour", InteractionBehaviours.Animation, ComparisonType.Equals, DisablingType.Draw)]
+    [SerializeField] private Animator animator;
+    [DrawIf("behaviour", InteractionBehaviours.Animation, ComparisonType.Equals, DisablingType.Draw)]
+    [SerializeField] private string triggerToPlay;
 
     public void Interact()
     {

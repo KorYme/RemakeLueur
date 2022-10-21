@@ -67,8 +67,8 @@ public class SummonSmallCire : MonoBehaviour
     public void RetakeControl()
     {
         cdSummon.ResetCD();
-        references.playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
         referencesSetter.ReconnectAllValues();
+        references.playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
         EnableScripts(true);
         isSummoned = false;
     }

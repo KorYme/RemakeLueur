@@ -5,12 +5,13 @@ using UnityEngine;
 public class DrawIfPropertyDrawer : PropertyDrawer
 {
     private DrawIfAttribute drawIfAttribute;
-
     SerializedProperty comparedField;
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        if ((attribute as DrawIfAttribute).simpleBoolean ? false : !ShowMe(property))
+        drawIfAttribute = attribute as DrawIfAttribute;
+        if ((ShowMe(property) && drawIfAttribute.trueCaseDisablingType == DisablingType.DontDraw)
+            || (!ShowMe(property) && drawIfAttribute.falseCaseDisablingType == DisablingType.DontDraw))
         {
             return 0f;
         }
@@ -20,6 +21,7 @@ public class DrawIfPropertyDrawer : PropertyDrawer
     public bool ShowMe(SerializedProperty property)
     {
         drawIfAttribute = attribute as DrawIfAttribute;
+        if (drawIfAttribute.simpleBoolean) return true;
         string path = property.propertyPath.Contains(".") ? 
             System.IO.Path.ChangeExtension(property.propertyPath, drawIfAttribute.comparedPropertyName) : 
             drawIfAttribute.comparedPropertyName;
@@ -82,19 +84,37 @@ public class DrawIfPropertyDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         drawIfAttribute = attribute as DrawIfAttribute;
-        if ((attribute as DrawIfAttribute).simpleBoolean ? true : ShowMe(property))
+        if (ShowMe(property))
         {
-            if (drawIfAttribute.disablingType == DisablingType.ReadOnly)
+            switch (drawIfAttribute.trueCaseDisablingType)
             {
-                GUI.enabled = false;
-                EditorGUI.PropertyField(position, property, label);
-                GUI.enabled = true;
+                case DisablingType.Draw:
+                    EditorGUI.PropertyField(position, property, label);
+                    break;
+                case DisablingType.ReadOnly:
+                    GUI.enabled = false;
+                    EditorGUI.PropertyField(position, property, label);
+                    GUI.enabled = true;
+                    break;
+                default:
+                    break;
             }
-            else
+        }
+        else
+        {
+            switch (drawIfAttribute.falseCaseDisablingType)
             {
-                EditorGUI.PropertyField(position, property, label);
+                case DisablingType.Draw:
+                    EditorGUI.PropertyField(position, property, label);
+                    break;
+                case DisablingType.ReadOnly:
+                    GUI.enabled = false;
+                    EditorGUI.PropertyField(position, property, label);
+                    GUI.enabled = true;
+                    break;
+                default:
+                    break;
             }
         }
     }
-
 }

@@ -12,25 +12,31 @@ public class DrawIfAttribute : PropertyAttribute
 {
     public string comparedPropertyName;
     public object comparedValue;
-    public DisablingType disablingType;
-    public ComparisonType comparisonType;
     public bool simpleBoolean = false;
+    public ComparisonType comparisonType;
+    public DisablingType trueCaseDisablingType;
+    public DisablingType falseCaseDisablingType;
 
-    public DrawIfAttribute(string comparedPropertyName, object comparedValue,
-        DisablingType disablingType = DisablingType.Draw, ComparisonType comparisonType = ComparisonType.Equals)
+    public DrawIfAttribute(string comparedPropertyName, object comparedValue, ComparisonType comparisonType = ComparisonType.Equals,
+        DisablingType trueCaseDisablingType = DisablingType.Draw, DisablingType falseCaseDisablingType = DisablingType.DontDraw)
     {
         this.comparedPropertyName = comparedPropertyName;
         this.comparedValue = comparedValue;
-        this.disablingType = disablingType;
         this.comparisonType = comparisonType;
+        this.trueCaseDisablingType = trueCaseDisablingType;
+        this.falseCaseDisablingType = falseCaseDisablingType;
         simpleBoolean = false;
     }
 
     public DrawIfAttribute(bool simpleBoolean,
-    DisablingType disablingType = DisablingType.Draw)
+    DisablingType trueCaseDisablingType = DisablingType.Draw, DisablingType falseCaseDisablingType = DisablingType.DontDraw)
     {
+        this.comparedPropertyName = null;
+        this.comparedValue = null;
+        this.comparisonType = ComparisonType.Equals;
         this.simpleBoolean = simpleBoolean;
-        this.disablingType = disablingType;
+        this.trueCaseDisablingType = trueCaseDisablingType;
+        this.falseCaseDisablingType = falseCaseDisablingType;
     }
 }
 
@@ -48,4 +54,5 @@ public enum DisablingType
 {
     Draw = 1,
     ReadOnly = 2,
+    DontDraw = 3,
 }

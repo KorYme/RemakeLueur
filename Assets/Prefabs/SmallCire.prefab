@@ -119,6 +119,21 @@ MonoBehaviour:
     m_Bits: 8
   radiusGC: 0.105
   lastCP: {fileID: 0}
+  jumpSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2802008390326273107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
-  referencesTypes: 0100000002000000
+  referencesTypes: 0200000003000000
 --- !u!1 &2802008390456418601
 GameObject:
   m_ObjectHideFlags: 0
