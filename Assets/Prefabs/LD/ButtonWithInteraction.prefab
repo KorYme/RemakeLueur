@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 7550709784847576375}
   - component: {fileID: 7550709784847576374}
   - component: {fileID: 7550709784847576369}
-  - component: {fileID: 7550709784847576373}
-  - component: {fileID: 7550709784847576370}
+  - component: {fileID: 6858035269131335085}
   m_Layer: 0
-  m_Name: ButtonTest
+  m_Name: ButtonWithInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +133,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7550709784847576373
+--- !u!114 &6858035269131335085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7550709784847576372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212b29938e90fb74893a08e7ef8d8c8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c599a4028edb7a46bcbe7c4a6b53c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   behaviour: 0
@@ -153,17 +152,5 @@ MonoBehaviour:
   script: {fileID: 0}
   objectToChange: {fileID: 0}
   enable: 0
---- !u!114 &7550709784847576370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7550709784847576372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c4c1eeeb5af1d4590022405b55333a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animatorBehaviours: 0
-  objectToDestroy: {fileID: 0}
+  thisAnimator: {fileID: 7550709784847576369}
+  triggerName: FullyPushed

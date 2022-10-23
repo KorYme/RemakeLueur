@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionScript : MonoBehaviour , InteractableObjects
 {
-    private enum InteractionBehaviours
+    protected enum InteractionBehaviours
     {
         None,
         Destroy,
@@ -13,26 +13,26 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
         GameObjectChanges,
     }
 
-    [SerializeField] private InteractionBehaviours behaviour = InteractionBehaviours.None;
+    [SerializeField] protected InteractionBehaviours behaviour = InteractionBehaviours.None;
 
     [DrawIf("behaviour", InteractionBehaviours.Destroy, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private GameObject objectToDestroy;
+    [SerializeField] protected GameObject objectToDestroy;
 
     [DrawIf("behaviour", InteractionBehaviours.Animation, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
     [DrawIf("behaviour", InteractionBehaviours.Animation, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private string triggerToPlay;
+    [SerializeField] protected string triggerToPlay;
 
     [DrawIf("behaviour", InteractionBehaviours.ScriptChanges, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private MonoBehaviour script;
+    [SerializeField] protected MonoBehaviour script;
 
     [DrawIf("behaviour", InteractionBehaviours.GameObjectChanges, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private GameObject objectToChange;
+    [SerializeField] protected GameObject objectToChange;
 
     [DrawIf("behaviour", new object[] { InteractionBehaviours.ScriptChanges, InteractionBehaviours.GameObjectChanges }, ComparisonType.Equals, DisablingType.Draw)]
-    [SerializeField] private bool enable;
+    [SerializeField] protected bool enable;
 
-    public void Interact()
+    public virtual void Interact()
     {
         switch (behaviour)
         {
