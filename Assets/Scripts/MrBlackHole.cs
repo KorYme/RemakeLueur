@@ -14,6 +14,7 @@ public class MrBlackHole : MonoBehaviour
 
     private void Update()
     {
+        if (Vector2.Distance(references.player.transform.position, transform.position) > rangeDetection.y) return;
         worldLight.intensity = Mathf.Clamp((Vector2.Distance(references.player.transform.position, transform.position) - rangeDetection.x) / (rangeDetection.y - rangeDetection.x), 0, 1);
     }
 

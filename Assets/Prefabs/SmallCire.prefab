@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2802008390326273110}
   - component: {fileID: 2802008390326273105}
   - component: {fileID: 2802008390326273104}
+  - component: {fileID: -4952588444294994858}
   - component: {fileID: 2802008390326273107}
   m_Layer: 0
   m_Name: SmallCire
@@ -134,6 +135,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-4952588444294994858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802008390326273106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f4cad0d79b6f545917430056bc1bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
 --- !u!114 &2802008390326273107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
-  referencesTypes: 0200000003000000
+  referencesTypes: 020000000300000006000000
 --- !u!1 &2802008390456418601
 GameObject:
   m_ObjectHideFlags: 0

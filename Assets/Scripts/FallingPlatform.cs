@@ -21,6 +21,8 @@ public class FallingPlatform : MonoBehaviour
     {
         cdFallingPlatform = new Cooldowns(timeBeforeFall);
         cdRespawnPlatform = new Cooldowns(timeBeforeRespawn);
+        cdFallingPlatform.ResetCD();
+        cdRespawnPlatform.ResetCD();
         rb.bodyType = RigidbodyType2D.Static;
         initialPosition = transform.position;
         initialRotation = transform.rotation;

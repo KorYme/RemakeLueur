@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ReferencesSetter : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ReferencesSetter : MonoBehaviour
         PlayerInteraction,
         SummonSmallCire,
         PlayerStats,
+        MainLight,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -68,6 +70,9 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.PlayerStats:
                 references.playerStats = GetComponent<PlayerStats>();
+                return;
+            case ReferencesType.MainLight:
+                references.mainLight = GetComponent<Light2D>();
                 return;
             default:
                 return;

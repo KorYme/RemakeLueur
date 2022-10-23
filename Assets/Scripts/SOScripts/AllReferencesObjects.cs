@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [CreateAssetMenu(fileName = "AllReferencesObjects", menuName = "ScriptableObjects/AllReferences")]
 public class AllReferencesObjects : ScriptableObject
@@ -14,4 +15,5 @@ public class AllReferencesObjects : ScriptableObject
     public PlayerInteraction playerInteraction;
     public SummonSmallCire summonSmallCire;
     public PlayerStats playerStats;
+    public Light2D mainLight;
 }
