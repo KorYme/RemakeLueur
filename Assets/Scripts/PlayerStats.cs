@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float basicDamage;
     [SerializeField] private Animator animator;
+    [SerializeField] private Image healthBar;
     [SerializeField] private AllReferencesObjects references;
     [SerializeField][DrawIf(true, DisablingType.ReadOnly)] private float currentHealth;
     private States cireState;
@@ -54,6 +56,6 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        //Behaviour HealthBar
+        healthBar.fillAmount = currentHealth / maxHealth;
     }
 }

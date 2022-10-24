@@ -16,4 +16,5 @@ public class AllReferencesObjects : ScriptableObject
     public SummonSmallCire summonSmallCire;
     public PlayerStats playerStats;
     public Light2D mainLight;
+    public MenuManager menuManager;
 }
