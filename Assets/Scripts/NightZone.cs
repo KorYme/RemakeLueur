@@ -34,7 +34,6 @@ public class NightZone : MonoBehaviour
     {
         if (isInside)
         {
-            Debug.Log(references.mainLight.intensity);
             references.mainLight.intensity -= Time.deltaTime / timeTransition;
             if (minimumLight >= references.mainLight.intensity)
             {
