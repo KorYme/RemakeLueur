@@ -17,7 +17,7 @@ public class ReferencesSetter : MonoBehaviour
         SummonSmallCire,
         PlayerStats,
         MainLight,
-        MenuManager,
+        PauseManager,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -75,8 +75,8 @@ public class ReferencesSetter : MonoBehaviour
             case ReferencesType.MainLight:
                 references.mainLight = GetComponent<Light2D>();
                 return;
-            case ReferencesType.MenuManager:
-                references.menuManager = GetComponent<MenuManager>();
+            case ReferencesType.PauseManager:
+                references.pauseManager = GetComponent<PauseManager>();
                 return;
             default:
                 return;

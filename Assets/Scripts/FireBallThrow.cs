@@ -48,7 +48,7 @@ public class FireBallThrow : MonoBehaviour
 
     void Fire()
     {
-        if (!cdFire.finished) return;
+        if (!cdFire.finished || Time.timeScale == 0f) return;
         direction = transform.rotation == new Quaternion(0, 1, 0, 0) ? 1 : -1;
         GameObject fireBall = Instantiate(fireBallGameObject, fireBallSpawn.position, Quaternion.Euler(new Vector3(0,0,-90) * direction) );
         fireBall.GetComponent<Rigidbody2D>().velocity = Vector2.left * fireBallSpeed * direction;

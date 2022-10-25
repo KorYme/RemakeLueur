@@ -5,28 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public enum SCENES
+    public void GoToScene(string scene)
     {
-        EntryMenu,
-        GameOverMenu,
-        Level1,
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(scene);
     }
 
-    public void GoToScene(SCENES scene)
+    public void QuitGame()
     {
-        switch (scene)
-        {
-            case SCENES.EntryMenu:
-                SceneManager.LoadScene("EntryMenu");
-                return;
-            case SCENES.GameOverMenu:
-                SceneManager.LoadScene("GameOverMenu");
-                return;
-            case SCENES.Level1:
-                SceneManager.LoadScene("Level1");
-                return;
-            default:
-                return;
-        }
+        Application.Quit();
     }
 }
