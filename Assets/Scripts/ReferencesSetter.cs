@@ -18,6 +18,7 @@ public class ReferencesSetter : MonoBehaviour
         PlayerStats,
         MainLight,
         PauseManager,
+        SoundManager,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -77,6 +78,9 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.PauseManager:
                 references.pauseManager = GetComponent<PauseManager>();
+                return;
+            case ReferencesType.SoundManager:
+                references.soundManager = GetComponent<SoundManager>();
                 return;
             default:
                 return;

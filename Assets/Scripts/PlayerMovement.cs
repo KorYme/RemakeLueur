@@ -26,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float radiusGC;
     public Transform lastCP;
 
-    public UnityEvent jumpSound;
-
     protected virtual void OnEnable()
     {
         inputManager = references.inputManager;
@@ -100,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (!TouchGround()) return;
-        jumpSound?.Invoke();
+        references.soundManager.jumpSound?.Invoke();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         animator.SetTrigger("Jump");
     }

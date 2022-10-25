@@ -19,7 +19,6 @@ public class SmallCireMovement : PlayerMovement
     public void InitializeNewPlayer(SummonSmallCire summonSmallCire)
     {
         player = summonSmallCire;
-        jumpSound = summonSmallCire.GetComponent<PlayerMovement>().jumpSound;
     }
 
     public override void Respawn(bool damaged = true)

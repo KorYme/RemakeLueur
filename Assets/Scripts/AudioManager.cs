@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Main Mixer")]
     [SerializeField] private AudioMixerGroup audioMixerGroup;
+
+    [Header("GameObject with all AudioSources")]
+    [SerializeField] private GameObject audioSources;
     
     [Header("All the clips")]
     [SerializeField] private Sounds[] sounds;
@@ -25,6 +28,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
         instance = this;
+        if (audioSources == null)
+        {
+            audioSources = gameObject;
+        }
         InitializeAllClips();
     }
 
@@ -35,7 +42,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sounds s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
+            s.source = audioSources.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.pitch = s.pitch;
             s.source.volume = s.volume;

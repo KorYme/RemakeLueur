@@ -627,6 +627,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331975205}
   m_CullTransparentMesh: 1
+--- !u!1 &387567659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387567660}
+  m_Layer: 0
+  m_Name: AudioSources
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387567660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387567659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2111109723}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435206577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,9 +1821,6 @@ MonoBehaviour:
     m_Bits: 8
   radiusGC: 0.25
   lastCP: {fileID: 1857866778}
-  jumpSound:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!70 &942679075
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17491,6 +17519,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2111109723}
   - component: {fileID: 2111109722}
+  - component: {fileID: 2111109724}
+  - component: {fileID: 2111109725}
   m_Layer: 0
   m_Name: ---AudioManager---
   m_TagString: Untagged
@@ -17511,7 +17541,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixerGroup: {fileID: 24300002, guid: 0a8a7f09d1e331149ad0041f1eca1e35, type: 2}
-  sounds: []
+  audioSources: {fileID: 387567659}
+  sounds:
+  - name: Jump
+    clip: {fileID: 0}
+    volume: 0.184
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &2111109723
 Transform:
   m_ObjectHideFlags: 0
@@ -17523,10 +17559,52 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 387567660}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111109724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111109721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2c75b790fcd9b4893dc757a236e27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2111109722}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jump
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2111109725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111109721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8781c61a2548e646a187ed3fda2091f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
+  referencesTypes: 0b000000
 --- !u!1001 &618963164212787778
 PrefabInstance:
   m_ObjectHideFlags: 0

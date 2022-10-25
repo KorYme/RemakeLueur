@@ -17,4 +17,5 @@ public class AllReferencesObjects : ScriptableObject
     public PlayerStats playerStats;
     public Light2D mainLight;
     public PauseManager pauseManager;
+    public SoundManager soundManager;
 }
