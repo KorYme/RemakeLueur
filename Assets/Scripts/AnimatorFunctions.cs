@@ -11,9 +11,17 @@ public class AnimatorFunctions : MonoBehaviour
     [SerializeField] private AnimatorBehaviours animatorBehaviours;
     [DrawIf("animatorBehaviours", AnimatorBehaviours.Destroy)][SerializeField] private GameObject objectToDestroy;
 
-
-    public void DestroyGameObject()
+    public void AnimationFunction()
     {
-        Destroy(objectToDestroy);
+        switch (animatorBehaviours)
+        {
+            case AnimatorBehaviours.None:
+                break;
+            case AnimatorBehaviours.Destroy:
+                Destroy(objectToDestroy);
+                break;
+            default:
+                break;
+        }
     }
 }

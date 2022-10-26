@@ -16887,6 +16887,7 @@ GameObject:
   - component: {fileID: 1731512409}
   - component: {fileID: 1731512411}
   - component: {fileID: 1731512412}
+  - component: {fileID: 1731512413}
   m_Layer: 0
   m_Name: CascadeTest
   m_TagString: Untagged
@@ -17007,6 +17008,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1731512413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731512408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c4c1eeeb5af1d4590022405b55333a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorBehaviours: 1
+  objectToDestroy: {fileID: 1731512408}
 --- !u!1 &1735911596
 GameObject:
   m_ObjectHideFlags: 0
@@ -18019,8 +18034,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1955026881}
     m_Modifications:
     - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1731512412}
+    - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
       propertyPath: behaviour
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
+      propertyPath: triggerToPlay
+      value: FadeOut
       objectReference: {fileID: 0}
     - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
       propertyPath: objectToDestroy
