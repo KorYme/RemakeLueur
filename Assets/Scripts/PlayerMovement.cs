@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementDirection;
     private bool flipedRight = true;
     private UnityAction AnimationChecks;
+    private Vector2 velocity;
 
     [SerializeField] protected AllReferencesObjects references;
     public Rigidbody2D rb;
@@ -53,8 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(movementDirection.x * speed * Time.fixedDeltaTime, rb.velocity.y);
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        rb.velocity = Vector2.SmoothDamp(rb.velocity, new Vector2(movementDirection.x * speed * Time.fixedDeltaTime, rb.velocity.y),
+            ref velocity, .2f);
+        animator.SetFloat("Speed", Mathf.Abs(movementDirection.x));
         if ((rb.velocity.x > 0.01 && !flipedRight) || (rb.velocity.x < -0.01 && flipedRight))
         {
             Flip();
@@ -120,6 +122,13 @@ public class PlayerMovement : MonoBehaviour
         rb.isKinematic = true;
         transform.position = lastCP.position;
         rb.isKinematic = false;
+    }
+
+    public void KnockBack(Vector2 direction)
+    {
+        if (!enabled) return;
+        Debug.Log(direction);
+        rb.AddForce(direction, ForceMode2D.Impulse);
     }
 
     private void OnDrawGizmos()

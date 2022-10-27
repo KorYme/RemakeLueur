@@ -23,7 +23,8 @@ public class Fireball : MonoBehaviour
         }
         else if ((liana >> collision.gameObject.layer) % 2 == 1)
         {
-            //Effets de particules + destroy lianes
+            //Effets de particules
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
