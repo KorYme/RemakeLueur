@@ -24,7 +24,7 @@ public class Fireball : MonoBehaviour
         else if ((liana >> collision.gameObject.layer) % 2 == 1)
         {
             //Effets de particules
-            Destroy(collision.gameObject);
+            collision.GetComponent<LianaBehaviour>().FadeOut();
             Destroy(gameObject);
         }
     }
