@@ -28,14 +28,23 @@ public class PlatformMovement : MonoBehaviour
 
     private void Awake()
     {
+        transform.position = movementPoints[0].m_Position;
+        indexPlatform = 0;
+        forceDirection = 1;
         if (movementPoints.Count <= 1)
         {
             this.enabled = false;
             return;
         }
-        indexPlatform = 0;
-        transform.position = movementPoints[0].m_Position;
-        forceDirection = 1;
+    }
+
+    private void OnEnable()
+    {
+        if (movementPoints.Count <= 1)
+        {
+            this.enabled = false;
+            return;
+        }
         RestartMovement();
         MoveAction += MovePlatformTo;
     }
@@ -86,6 +95,7 @@ public class PlatformMovement : MonoBehaviour
 
     public float UpdateTimeToTravel()
     {
+        if (movementPoints.Count <= 0) return 0;
         float timeCalculated = 0;
         for (int i = 0; i < movementPoints.Count; i++)
         {
