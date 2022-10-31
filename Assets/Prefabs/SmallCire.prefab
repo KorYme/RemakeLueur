@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2802008390326273110}
   - component: {fileID: 2802008390326273105}
   - component: {fileID: 2802008390326273104}
-  - component: {fileID: -4952588444294994858}
+  - component: {fileID: 2969853898534740219}
   - component: {fileID: 2802008390326273107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallCire
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
     m_Bits: 8
   radiusGC: 0.105
   lastCP: {fileID: 0}
---- !u!114 &-4952588444294994858
+--- !u!114 &2969853898534740219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2802008390326273106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58f4cad0d79b6f545917430056bc1bf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5423a711da2b33c47879311fa81db062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}

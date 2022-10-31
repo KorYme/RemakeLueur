@@ -5,28 +5,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    private InputManager inputManager;
-    private InputAction interact;
+    protected InputManager inputManager;
+    protected InputAction interact;
 
-    private InteractableObjects lastTouchedObjects;
+    protected InteractableObjects lastTouchedObjects;
 
-    [SerializeField] private AllReferencesObjects references;
+    [SerializeField] protected AllReferencesObjects references;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
-        if (references.inputManager.playerInputs == null) return;
         inputManager = references.inputManager;
         interact = inputManager.playerInputs.Player.Interact;
         interact?.Enable();
         interact.performed += OnInteraction;
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
         interact?.Disable();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<InteractableObjects>() != null)
         {
@@ -34,7 +33,7 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<InteractableObjects>() == lastTouchedObjects)
         {
@@ -42,9 +41,9 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private void OnInteraction(InputAction.CallbackContext ctx) => InteractWith();
+    protected void OnInteraction(InputAction.CallbackContext ctx) => InteractWith();
 
-    private void InteractWith()
+    protected void InteractWith()
     {
         if (lastTouchedObjects == null) return;
         lastTouchedObjects.Interact();

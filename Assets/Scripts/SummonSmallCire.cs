@@ -55,7 +55,6 @@ public class SummonSmallCire : MonoBehaviour
         else if (playerMovement.TouchGround() && playerMovement.rb.velocity.magnitude <= 0.1f && cdSummon.finished)
         {
             isSummoned = true;
-            references.playerMovement.rb.bodyType = RigidbodyType2D.Static;
             EnableScripts(false);
             animator.SetFloat("Speed", 0f);
             animator.SetTrigger("ForceIdle");
@@ -68,7 +67,6 @@ public class SummonSmallCire : MonoBehaviour
     {
         cdSummon.ResetCD();
         referencesSetter.ReconnectAllValues();
-        references.playerMovement.rb.bodyType = RigidbodyType2D.Dynamic;
         EnableScripts(true);
         isSummoned = false;
     }
@@ -77,6 +75,6 @@ public class SummonSmallCire : MonoBehaviour
     {
         references.playerMovement.enabled = enable;
         references.fireBallThrow.enabled = enable;
-        //references.playerInteraction.enabled = enable;
+        references.playerInteraction.enabled = enable;
     }
 }
