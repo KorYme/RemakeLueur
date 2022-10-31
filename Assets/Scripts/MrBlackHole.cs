@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class MrBlackHole : MonoBehaviour
 {
-    [SerializeField] private Light2D worldLight;
     [SerializeField] private AllReferencesObjects references;
     [SerializeField] private Vector2 rangeDetection;
     [SerializeField] private bool drawGizmos;
@@ -15,7 +13,7 @@ public class MrBlackHole : MonoBehaviour
     private void Update()
     {
         if (Vector2.Distance(references.player.transform.position, transform.position) > rangeDetection.y) return;
-        worldLight.intensity = Mathf.Clamp((Vector2.Distance(references.player.transform.position, transform.position) - rangeDetection.x) / (rangeDetection.y - rangeDetection.x), 0, 1);
+        references.mainLight.intensity = Mathf.Clamp((Vector2.Distance(references.player.transform.position, transform.position) - rangeDetection.x) / (rangeDetection.y - rangeDetection.x), 0, 1);
     }
 
     private void OnValidate()

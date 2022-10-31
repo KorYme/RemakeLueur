@@ -18,4 +18,5 @@ public class AllReferencesObjects : ScriptableObject
     public Light2D mainLight;
     public PauseManager pauseManager;
     public SoundManager soundManager;
+    public MenuManager menuManager;
 }

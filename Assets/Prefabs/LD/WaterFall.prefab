@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1293060547761997518}
   - component: {fileID: 1293060547761997513}
   - component: {fileID: 1293060547761997512}
+  - component: {fileID: 307512621925114508}
   m_Layer: 0
   m_Name: WaterFall
   m_TagString: Untagged
@@ -147,3 +148,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorBehaviours: 1
   objectToDestroy: {fileID: 1293060547761997517}
+--- !u!114 &307512621925114508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293060547761997517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171f507ca5722f7498fbe2f724af4dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
+  knockbackForce: 25

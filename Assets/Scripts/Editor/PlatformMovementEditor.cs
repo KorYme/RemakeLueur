@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlatformMovementEditor : Editor
 {
     int index;
+    bool autoUpdate;
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -23,6 +24,14 @@ public class PlatformMovementEditor : Editor
             platformMovement.SetPositionPlatform(index);
         }
         GUILayout.EndHorizontal();
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("AutoRefresh Position", EditorStyles.boldLabel);
+        autoUpdate = EditorGUILayout.Toggle(autoUpdate);
+        GUILayout.EndHorizontal();
+        if (autoUpdate)
+        {
+            platformMovement.SetPositionPlatform(index);
+        }
         if (GUILayout.Button("Create new point"))
         {
             platformMovement.CreateNewPoint();

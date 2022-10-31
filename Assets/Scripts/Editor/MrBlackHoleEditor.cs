@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEngine.Rendering.Universal;
 using UnityEngine;
 
 [CustomEditor(typeof(MrBlackHole))]
@@ -33,7 +32,6 @@ public class MrBlackHoleEditor : Editor
         MrBlackHole script = (MrBlackHole)target;
         using (new EditorGUI.DisabledScope(true)) EditorGUILayout.ObjectField("Script", MonoScript.FromMonoBehaviour((MonoBehaviour)target), GetType(), false);
         
-        EditorGUILayout.PropertyField(worldLightProp, new GUIContent("World Light"));
         EditorGUILayout.PropertyField(referencesProp, new GUIContent("References"));
         EditorGUILayout.PropertyField(rangeDetectionProp, new GUIContent("Range Detection"));
 

@@ -14,7 +14,7 @@ public class PlatformMovement : MonoBehaviour
         public Color m_color;
     }
 
-    [SerializeField] private Color trailColor;
+    [SerializeField] private Color trailColor = Color.black;
     [SerializeField] private float platformSpeed;
     [SerializeField][DrawIf(true, DisablingType.ReadOnly)] private float timeToTravel;
     public List<MovementPoint> movementPoints;
@@ -28,14 +28,15 @@ public class PlatformMovement : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = movementPoints[0].m_Position;
-        indexPlatform = 0;
-        forceDirection = 1;
+        
         if (movementPoints.Count <= 1)
         {
             this.enabled = false;
             return;
         }
+        transform.position = movementPoints[0].m_Position;
+        indexPlatform = 0;
+        forceDirection = 1;
     }
 
     private void OnEnable()
@@ -85,12 +86,6 @@ public class PlatformMovement : MonoBehaviour
         }
         RestartMovement();
         MoveAction += MovePlatformTo;
-    }
-
-
-    private void OnValidate()
-    {
-        timeToTravel = UpdateTimeToTravel();
     }
 
     public float UpdateTimeToTravel()
@@ -162,5 +157,10 @@ public class PlatformMovement : MonoBehaviour
                 Gizmos.DrawLine(movementPoints[i-1].m_Position, movementPoints[i].m_Position);
             }
         }
+    }
+
+    private void OnValidate()
+    {
+        timeToTravel = UpdateTimeToTravel();
     }
 }

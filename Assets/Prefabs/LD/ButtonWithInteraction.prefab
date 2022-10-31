@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2013053171
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 2a7b76afd818b6b478d45be5de4b6c35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,5 +184,6 @@ MonoBehaviour:
   script: {fileID: 0}
   objectToChange: {fileID: 0}
   enable: 0
+  levelToLoad: 
   thisAnimator: {fileID: 7550709784847576369}
   triggerName: FullyPushed

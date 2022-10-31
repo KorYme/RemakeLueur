@@ -45,8 +45,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AnimationAfterDeath()
     {
-        Time.timeScale = 0;
-        //Display death menu
+        references.menuManager.GoToScene("GameOverMenu");
     }
 
     private void UpdateState()

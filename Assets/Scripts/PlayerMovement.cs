@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private float speed;
+    [Range(0f,1f)][SerializeField] private float movementSmoothness;
     [SerializeField] private float jumpForce;
     [SerializeField] protected Transform centerPointGC;
     [SerializeField] private LayerMask groundLayer;
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = Vector2.SmoothDamp(rb.velocity, new Vector2(movementDirection.x * speed * Time.fixedDeltaTime, rb.velocity.y),
-            ref velocity, .2f);
+            ref velocity, movementSmoothness);
         animator.SetFloat("Speed", Mathf.Abs(movementDirection.x));
         if ((rb.velocity.x > 0.01 && !flipedRight) || (rb.velocity.x < -0.01 && flipedRight))
         {

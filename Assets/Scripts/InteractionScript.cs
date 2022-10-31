@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractionScript : MonoBehaviour , InteractableObjects
 {
@@ -11,6 +12,7 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
         Animation,
         ScriptChanges,
         GameObjectChanges,
+        ChangeLevel,
     }
 
     [SerializeField] protected InteractionBehaviours behaviour = InteractionBehaviours.None;
@@ -32,6 +34,9 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
     [DrawIf("behaviour", new object[] { InteractionBehaviours.ScriptChanges, InteractionBehaviours.GameObjectChanges }, ComparisonType.Equals, DisablingType.Draw)]
     [SerializeField] protected bool enable;
 
+    [DrawIf("behaviour", InteractionBehaviours.ChangeLevel, ComparisonType.Equals, DisablingType.Draw)]
+    [SerializeField] protected string levelToLoad;
+
     public virtual void Interact()
     {
         switch (behaviour)
@@ -49,6 +54,9 @@ public class InteractionScript : MonoBehaviour , InteractableObjects
                 return;
             case InteractionBehaviours.GameObjectChanges:
                 objectToChange.SetActive(enable);
+                return;
+            case InteractionBehaviours.ChangeLevel:
+                SceneManager.LoadScene(levelToLoad);
                 return;
         }
     }

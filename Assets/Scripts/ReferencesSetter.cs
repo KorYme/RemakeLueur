@@ -19,6 +19,7 @@ public class ReferencesSetter : MonoBehaviour
         MainLight,
         PauseManager,
         SoundManager,
+        MenuManager,
     }
 
     [SerializeField] private AllReferencesObjects references;
@@ -81,6 +82,9 @@ public class ReferencesSetter : MonoBehaviour
                 return;
             case ReferencesType.SoundManager:
                 references.soundManager = GetComponent<SoundManager>();
+                return;
+            case ReferencesType.MenuManager:
+                references.menuManager = GetComponent<MenuManager>();
                 return;
             default:
                 return;
