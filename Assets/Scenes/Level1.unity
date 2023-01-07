@@ -602,7 +602,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1522,7 +1522,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
       propertyPath: drawGizmos
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: rangeDetection.y
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: minMaxIntensity.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: minMaxIntensity.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884552859143328949, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
       propertyPath: behaviour
@@ -2578,7 +2590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942679070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.5, y: -2.4, z: 0}
+  m_LocalPosition: {x: 66.5, y: 39.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15155,7 +15167,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15643,6 +15655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
   personalLight: {fileID: 1201061870}
+  speedAnimation: 0
 --- !u!1 &1216596066
 GameObject:
   m_ObjectHideFlags: 0

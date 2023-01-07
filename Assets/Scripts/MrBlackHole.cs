@@ -6,6 +6,7 @@ public class MrBlackHole : MonoBehaviour
 {
     [SerializeField] private AllReferencesObjects references;
     [SerializeField] private Vector2 rangeDetection;
+    [SerializeField] private Vector2 minMaxIntensity;
     [SerializeField] private bool drawGizmos;
     [DrawIf("drawGizmos", true, ComparisonType.Equals, DisablingType.Draw, DisablingType.ReadOnly)][SerializeField] private Color furthestCircleColor;
     [DrawIf("drawGizmos", true, ComparisonType.Equals, DisablingType.Draw, DisablingType.ReadOnly)][SerializeField] private Color closestCircleColor;
@@ -13,7 +14,7 @@ public class MrBlackHole : MonoBehaviour
     private void Update()
     {
         if (Vector2.Distance(references.player.transform.position, transform.position) > rangeDetection.y) return;
-        references.mainLight.intensity = Mathf.Clamp((Vector2.Distance(references.player.transform.position, transform.position) - rangeDetection.x) / (rangeDetection.y - rangeDetection.x), 0, 1);
+        references.mainLight.intensity = Mathf.Clamp((Vector2.Distance(references.player.transform.position, transform.position) - rangeDetection.x) / (rangeDetection.y - rangeDetection.x), minMaxIntensity.x, minMaxIntensity.y);
     }
 
     private void OnValidate()

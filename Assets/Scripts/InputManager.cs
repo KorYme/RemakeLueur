@@ -12,7 +12,6 @@ public class InputManager : MonoBehaviour
     {
         playerInputs = new PlayerInputs();
         smallCireInputs = new PlayerInputs();
-
         GetComponent<ReferencesSetter>().ReconnectValues(ReferencesSetter.ReferencesType.InputManager);
         references.playerMovement.enabled = true;
         references.fireBallThrow.enabled = true;
