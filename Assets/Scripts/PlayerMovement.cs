@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     protected InputAction movement;
     protected InputAction jump;
 
+    protected bool jumpDelay;
+
     private Vector2 movementDirection;
     private bool flipedRight = true;
     private UnityAction AnimationChecks;
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         jump = inputManager.playerInputs.Player.Jump;
         jump?.Enable();
         jump.performed += OnJump;
+        jumpDelay = false;
     }
 
     private void OnDisable()
@@ -100,10 +103,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        if (jumpDelay) return;
         if (!TouchGround()) return;
+        StartCoroutine(JumpDelayCoroutine());
         references.soundManager.jumpSound?.Invoke();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         animator.SetTrigger("Jump");
+    }
+
+    IEnumerator JumpDelayCoroutine()
+    {
+        jumpDelay = true;
+        yield return new WaitForSeconds(0.5f);
+        jumpDelay = false;
     }
 
     private void Flip()

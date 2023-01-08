@@ -16,6 +16,11 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private List<GameObject> images = new List<GameObject>();
 
+    protected bool IsMiniCire
+    {
+        get => this is SmallCireInteraction;
+    }
+
     protected virtual void OnEnable()
     {
         inputManager = references.inputManager;
@@ -34,11 +39,16 @@ public class PlayerInteraction : MonoBehaviour
         if (collision.GetComponent<InteractableObjects>() != null)
         {
             lastTouchedObjects = collision.GetComponent<InteractableObjects>();
-            images[0].SetActive(true);
+            if (!IsMiniCire)
+            {
+                if (images[0] == null) return;
+                images[0]?.SetActive(true);
+            }
         }
-        else if (collision.CompareTag("ZoneA"))
+        if (collision.CompareTag("ZoneA") && !IsMiniCire)
         {
-            images[1].SetActive(true);
+            if (images[1] == null) return;
+            images[1]?.SetActive(true);
         }
     }
 
@@ -47,11 +57,16 @@ public class PlayerInteraction : MonoBehaviour
         if (collision.GetComponent<InteractableObjects>() == lastTouchedObjects)
         {
             lastTouchedObjects = null;
-            images[0].SetActive(false);
+            if (!IsMiniCire)
+            {
+                if (images[0] == null) return;
+                images[0]?.SetActive(false);
+            }
         }
-        else if (collision.CompareTag("ZoneA"))
+        if (collision.CompareTag("ZoneA") && !IsMiniCire)
         {
-            images[1].SetActive(false);
+            if (images[1] == null) return;
+            images[1]?.SetActive(false);
         }
     }
 
