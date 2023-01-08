@@ -80,6 +80,15 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skip/Play"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5a6fc13-9667-410b-a504-eb21ad77478c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -236,6 +245,50 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76315822-9616-4f94-8dd0-aab94b22fbb6"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip/Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44de8099-c489-4a75-b53f-4931a768b489"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip/Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9e99834-bf92-4a38-9892-63dba21aa50f"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip/Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""880b2ed9-2223-44ab-95b0-3559779aaafe"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip/Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -250,6 +303,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Summon = m_Player.FindAction("Summon", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_SkipPlay = m_Player.FindAction("Skip/Play", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -315,6 +369,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Summon;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_SkipPlay;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -325,6 +380,7 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Summon => m_Wrapper.m_Player_Summon;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @SkipPlay => m_Wrapper.m_Player_SkipPlay;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -352,6 +408,9 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @SkipPlay.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipPlay;
+                @SkipPlay.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipPlay;
+                @SkipPlay.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipPlay;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -374,6 +433,9 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @SkipPlay.started += instance.OnSkipPlay;
+                @SkipPlay.performed += instance.OnSkipPlay;
+                @SkipPlay.canceled += instance.OnSkipPlay;
             }
         }
     }
@@ -386,5 +448,6 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnSummon(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnSkipPlay(InputAction.CallbackContext context);
     }
 }
