@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class PlayerInteraction : MonoBehaviour
     protected InteractableObjects lastTouchedObjects;
 
     [SerializeField] protected AllReferencesObjects references;
+
+    [SerializeField] private List<GameObject> images = new List<GameObject>();
+
+    protected bool IsMiniCire
+    {
+        get => this is SmallCireInteraction;
+    }
 
     protected virtual void OnEnable()
     {
@@ -30,6 +39,16 @@ public class PlayerInteraction : MonoBehaviour
         if (collision.GetComponent<InteractableObjects>() != null)
         {
             lastTouchedObjects = collision.GetComponent<InteractableObjects>();
+            if (!IsMiniCire)
+            {
+                if (images[0] == null) return;
+                images[0]?.SetActive(true);
+            }
+        }
+        if (collision.CompareTag("ZoneA") && !IsMiniCire)
+        {
+            if (images[1] == null) return;
+            images[1]?.SetActive(true);
         }
     }
 
@@ -38,6 +57,16 @@ public class PlayerInteraction : MonoBehaviour
         if (collision.GetComponent<InteractableObjects>() == lastTouchedObjects)
         {
             lastTouchedObjects = null;
+            if (!IsMiniCire)
+            {
+                if (images[0] == null) return;
+                images[0]?.SetActive(false);
+            }
+        }
+        if (collision.CompareTag("ZoneA") && !IsMiniCire)
+        {
+            if (images[1] == null) return;
+            images[1]?.SetActive(false);
         }
     }
 

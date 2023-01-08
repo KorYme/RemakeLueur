@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviour: 5
-  objectToDestroy: {fileID: 0}
+  objectToDestroy: {fileID: 3568883583354681186}
   animator: {fileID: 0}
   triggerToPlay: 
   script: {fileID: 0}
@@ -206,7 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
-  rangeDetection: {x: 3.5, y: 16}
+  rangeDetection: {x: 3.5, y: 92}
+  minMaxIntensity: {x: 0.15, y: 1}
   drawGizmos: 1
   furthestCircleColor: {r: 0, g: 1, b: 0.19227934, a: 1}
   closestCircleColor: {r: 1, g: 0, b: 0, a: 1}
