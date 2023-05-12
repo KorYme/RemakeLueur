@@ -2683,11 +2683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3568883583354681188, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.87856
+      value: 71.91
       objectReference: {fileID: 0}
     - target: {fileID: 3568883583354681188, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.067
+      value: 39.32
       objectReference: {fileID: 0}
     - target: {fileID: 3568883583354681188, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2721,6 +2721,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: drawGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: rangeDetection.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: rangeDetection.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: minMaxIntensity.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568883583354681191, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: minMaxIntensity.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884552859143328949, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: behaviour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884552859143328949, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
+      propertyPath: objectToDestroy
+      value: 
+      objectReference: {fileID: 1953952571}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af4fbc2157f7ba4a9f30614c36716b6, type: 3}
 --- !u!4 &595317227 stripped
@@ -4347,7 +4378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942679070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.5, y: 39.8, z: 0}
+  m_LocalPosition: {x: -7.09, y: -3.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19376,6 +19407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   references: {fileID: 11400000, guid: 9194fc228a50e064f98ff6a84ced3cf7, type: 2}
   personalLight: {fileID: 1201061870}
+<<<<<<< Updated upstream
   speedAnimation: 3.1
   deltaAnimation: 0.22
 --- !u!1 &1209045885
@@ -19413,6 +19445,9 @@ Transform:
   m_Father: {fileID: 1926439195}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  speedAnimation: 2
+>>>>>>> Stashed changes
 --- !u!1 &1216596066
 GameObject:
   m_ObjectHideFlags: 0
@@ -20626,7 +20661,11 @@ PrefabInstance:
     - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
       propertyPath: animator
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 850465212}
+=======
+      objectReference: {fileID: 1733848671}
+>>>>>>> Stashed changes
     - target: {fileID: 6858035269131335085, guid: 61c9dd22626a48942a9f4b1e4f828503, type: 3}
       propertyPath: behaviour
       value: 2
@@ -21245,6 +21284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc07859fe04aa4f4492ef9d4636d057b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1733848671 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1293060547761997513, guid: 63535fef81a40b84dad03094bf6b7077, type: 3}
+  m_PrefabInstance: {fileID: 749788899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1735911596
 GameObject:
   m_ObjectHideFlags: 0
